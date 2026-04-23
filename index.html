@@ -28,8 +28,10 @@
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     min-height: 100vh; background: var(--navy); padding: 32px;
   }
-  #key-screen h1 { font-family: 'DM Serif Display', serif; color: #fff; font-size: 2rem; margin-bottom: 8px; text-align: center; }
-  #key-screen p { color: #94a3b8; font-size: 14px; margin-bottom: 32px; text-align: center; max-width: 340px; line-height: 1.6; }
+  .key-logo { font-family: 'DM Serif Display', serif; color: #fff; font-size: 2rem; margin-bottom: 4px; text-align: center; }
+  .key-logo span { color: var(--gold); }
+  .key-tagline { color: var(--gold); font-size: 11px; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 8px; }
+  .key-sub { color: #94a3b8; font-size: 14px; margin-bottom: 32px; text-align: center; max-width: 340px; line-height: 1.6; }
   #key-input {
     width: 100%; max-width: 380px; padding: 14px 16px; border-radius: 10px;
     border: 1px solid #1e3a5f; background: #111e35; color: #fff;
@@ -43,147 +45,130 @@
   }
   #key-btn:hover { opacity: .88; }
   #key-error { color: #f87171; font-size: 13px; margin-top: 8px; display: none; }
+  .key-note { margin-top: 20px; font-size: 12px; color: #334155; }
 
   /* ── Main App ── */
   #app { display: none; }
 
   /* Header */
-  .header {
-    background: var(--navy); padding: 20px 24px 0;
-    position: sticky; top: 0; z-index: 10;
-  }
-  .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-  .logo { font-family: 'DM Serif Display', serif; color: #fff; font-size: 1.1rem; letter-spacing: .01em; }
+  .header { background: var(--navy); padding: 16px 20px 0; position: sticky; top: 0; z-index: 10; }
+  .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .logo-wrap { display: flex; flex-direction: column; }
+  .logo { font-family: 'DM Serif Display', serif; color: #fff; font-size: 1.1rem; }
   .logo span { color: var(--gold); }
-  .reset-btn { background: none; border: 1px solid #1e3a5f; color: #64748b; font-size: 12px; padding: 5px 10px; border-radius: 6px; cursor: pointer; }
-  .reset-btn:hover { color: #94a3b8; border-color: #334155; }
+  .logo-sub { font-size: 10px; color: var(--gold); letter-spacing: .12em; text-transform: uppercase; margin-top: 1px; }
+  .reset-btn { background: none; border: 1px solid #1e3a5f; color: #64748b; font-size: 11px; padding: 5px 10px; border-radius: 6px; cursor: pointer; }
 
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
-  .stat { background: #111e35; border-radius: 10px; padding: 12px; text-align: center; }
-  .stat-num { font-size: 1.6rem; font-weight: 600; font-family: 'DM Serif Display', serif; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 14px 0; }
+  .stat { background: #111e35; border-radius: 10px; padding: 10px; text-align: center; }
+  .stat-num { font-size: 1.5rem; font-weight: 600; font-family: 'DM Serif Display', serif; }
   .stat-num.red { color: var(--red); }
   .stat-num.amber { color: var(--amber); }
   .stat-num.white { color: #fff; }
-  .stat-label { font-size: 11px; color: #64748b; margin-top: 2px; letter-spacing: .04em; text-transform: uppercase; }
+  .stat-label { font-size: 10px; color: #64748b; margin-top: 2px; letter-spacing: .04em; text-transform: uppercase; }
 
-  .tabs { display: flex; gap: 8px; padding-bottom: 0; }
-  .tab {
-    padding: 9px 16px; border-radius: 20px 20px 0 0; font-size: 13px; font-weight: 500;
-    border: none; cursor: pointer; background: #111e35; color: #64748b; transition: all .15s;
-  }
+  .tabs { display: flex; gap: 6px; }
+  .tab { padding: 8px 14px; border-radius: 20px 20px 0 0; font-size: 12px; font-weight: 500; border: none; cursor: pointer; background: #111e35; color: #64748b; transition: all .15s; }
   .tab.active { background: var(--card); color: var(--text); }
-  .tab .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 4px; }
   .dot-red { background: var(--red); }
   .dot-amber { background: var(--amber); }
 
   /* Contact List */
-  .list { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  .list { padding: 14px; display: flex; flex-direction: column; gap: 12px; }
 
-  .contact-card {
-    background: #fff; border-radius: var(--radius); border: 1.5px solid var(--border);
-    overflow: hidden; transition: box-shadow .2s;
-  }
-  .contact-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+  .contact-card { background: #fff; border-radius: var(--radius); border: 1.5px solid var(--border); overflow: hidden; transition: box-shadow .2s; }
   .contact-card.urgent { border-left: 4px solid var(--red); }
   .contact-card.soon { border-left: 4px solid var(--amber); }
+  .contact-card.contacted { opacity: .65; border-left-color: var(--green) !important; }
 
-  .card-header { display: flex; align-items: flex-start; justify-content: space-between; padding: 14px 14px 10px; }
+  .card-header { display: flex; align-items: flex-start; justify-content: space-between; padding: 12px 12px 8px; }
   .card-name { font-weight: 600; font-size: 15px; }
   .card-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .badge {
-    font-size: 10px; font-weight: 700; letter-spacing: .06em; padding: 3px 8px;
-    border-radius: 20px; text-transform: uppercase; white-space: nowrap;
-  }
+  .card-phone { font-size: 11px; color: var(--accent); margin-top: 2px; }
+  .badge { font-size: 10px; font-weight: 700; letter-spacing: .06em; padding: 3px 8px; border-radius: 20px; text-transform: uppercase; white-space: nowrap; }
   .badge-red { background: #fef2f2; color: var(--red); }
   .badge-amber { background: #fffbeb; color: var(--amber); }
+  .badge-green { background: #f0fdf4; color: var(--green); }
 
-  .urgency-flag {
-    margin: 0 14px 12px; padding: 8px 12px; border-radius: 8px;
-    background: #fff8f0; border-left: 3px solid var(--amber);
-    font-size: 13px; color: #92400e; display: flex; align-items: center; gap: 6px;
-  }
+  .urgency-flag { margin: 0 12px 10px; padding: 7px 11px; border-radius: 8px; background: #fff8f0; border-left: 3px solid var(--amber); font-size: 13px; color: #92400e; }
   .urgency-flag.red { background: #fff5f5; border-left-color: var(--red); color: #991b1b; }
+  .urgency-flag.green { background: #f0fdf4; border-left-color: var(--green); color: #166534; }
 
-  .card-actions { display: flex; gap: 8px; padding: 0 14px 14px; }
+  /* Action buttons row */
+  .card-actions { display: flex; gap: 6px; padding: 0 12px 12px; flex-wrap: wrap; }
   .draft-btn {
-    flex: 1; padding: 10px; border-radius: 9px; background: var(--navy); color: #fff;
-    font-size: 13px; font-weight: 600; border: none; cursor: pointer; transition: opacity .2s;
-    display: flex; align-items: center; justify-content: center; gap: 6px;
+    flex: 1; min-width: 120px; padding: 9px; border-radius: 9px; background: var(--navy); color: #fff;
+    font-size: 12px; font-weight: 600; border: none; cursor: pointer; transition: opacity .2s;
+    display: flex; align-items: center; justify-content: center; gap: 4px;
   }
-  .draft-btn:hover { opacity: .88; }
   .draft-btn:disabled { opacity: .5; cursor: not-allowed; }
   .call-btn {
-    padding: 10px 14px; border-radius: 9px; background: #f1f5f9; border: none;
-    cursor: pointer; font-size: 16px; transition: background .15s;
+    padding: 9px 13px; border-radius: 9px; background: #f0fdf4; border: 1.5px solid #bbf7d0;
+    cursor: pointer; font-size: 15px; text-decoration: none; display: flex; align-items: center;
   }
-  .call-btn:hover { background: #e2e8f0; }
+  .contacted-btn {
+    padding: 9px 11px; border-radius: 9px; background: #f8faff; border: 1.5px solid #dbeafe;
+    cursor: pointer; font-size: 12px; color: var(--accent); font-weight: 600; white-space: nowrap;
+  }
+  .contacted-btn.done { background: #f0fdf4; border-color: #bbf7d0; color: var(--green); }
+
+  /* Draft tabs */
+  .draft-tabs { display: flex; gap: 6px; margin: 0 12px 6px; }
+  .draft-tab { padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; border: none; cursor: pointer; background: #f1f5f9; color: var(--muted); }
+  .draft-tab.active { background: var(--accent); color: #fff; }
 
   /* Draft output */
   .draft-output {
-    margin: 0 14px 14px; padding: 12px 14px; border-radius: 10px;
-    background: #f8faff; border: 1px solid #dbeafe; display: none;
-    font-size: 13px; line-height: 1.6; color: #1e40af;
-    white-space: pre-wrap;
+    margin: 0 12px 12px; padding: 12px 14px; border-radius: 10px;
+    background: #f8faff; border: 1px solid #dbeafe;
+    font-size: 13px; line-height: 1.6; color: #1e3a6e; white-space: pre-wrap; display: none;
   }
   .draft-output.visible { display: block; }
-  .draft-copy {
-    margin-top: 8px; font-size: 12px; color: var(--accent); background: none; border: none;
-    cursor: pointer; padding: 0; font-weight: 600; text-decoration: underline;
-  }
+  .draft-actions-row { display: flex; gap: 8px; margin-top: 8px; }
+  .draft-copy { font-size: 12px; color: var(--accent); background: none; border: none; cursor: pointer; padding: 0; font-weight: 600; text-decoration: underline; }
 
   /* Add Contact */
-  .add-section { padding: 0 16px 24px; }
-  .add-btn {
-    width: 100%; padding: 13px; border-radius: var(--radius); background: none;
-    border: 2px dashed var(--border); color: var(--muted); font-size: 14px;
-    cursor: pointer; transition: all .15s; font-family: 'DM Sans', sans-serif;
-  }
+  .add-section { padding: 0 14px 28px; }
+  .add-btn { width: 100%; padding: 13px; border-radius: var(--radius); background: none; border: 2px dashed var(--border); color: var(--muted); font-size: 14px; cursor: pointer; transition: all .15s; font-family: 'DM Sans', sans-serif; }
   .add-btn:hover { border-color: var(--accent); color: var(--accent); background: #f0f6ff; }
 
-  /* Add form */
   .add-form { background: #fff; border-radius: var(--radius); border: 1.5px solid var(--border); padding: 16px; margin-bottom: 12px; display: none; }
   .add-form.visible { display: block; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
-  .form-input {
-    width: 100%; padding: 10px 12px; border-radius: 8px; border: 1.5px solid var(--border);
-    font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--text); outline: none;
-  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+  .form-input { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1.5px solid var(--border); font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--text); outline: none; }
   .form-input:focus { border-color: var(--accent); }
   select.form-input { background: #fff; }
-  .form-actions { display: flex; gap: 8px; margin-top: 4px; }
-  .save-btn {
-    flex: 1; padding: 10px; border-radius: 8px; background: var(--accent); color: #fff;
-    font-size: 13px; font-weight: 600; border: none; cursor: pointer;
-  }
-  .cancel-btn {
-    padding: 10px 16px; border-radius: 8px; background: #f1f5f9; color: var(--muted);
-    font-size: 13px; border: none; cursor: pointer;
-  }
+  .form-actions { display: flex; gap: 8px; margin-top: 6px; }
+  .save-btn { flex: 1; padding: 10px; border-radius: 8px; background: var(--accent); color: #fff; font-size: 13px; font-weight: 600; border: none; cursor: pointer; }
+  .cancel-btn { padding: 10px 16px; border-radius: 8px; background: #f1f5f9; color: var(--muted); font-size: 13px; border: none; cursor: pointer; }
 
-  /* Empty state */
   .empty { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 14px; }
-
-  /* Footer */
-  .footer { text-align: center; padding: 20px; font-size: 11px; color: #cbd5e1; font-family: monospace; letter-spacing: .08em; }
+  .footer { text-align: center; padding: 20px; font-size: 11px; color: #94a3b8; letter-spacing: .06em; }
+  .footer strong { color: var(--gold); }
 </style>
 </head>
 <body>
 
 <!-- API Key Screen -->
 <div id="key-screen">
-  <h1>Smart<span>Contact</span></h1>
-  <p>AI-powered contact prioritization for real estate agents. Enter your Anthropic API key to get started.</p>
+  <div class="key-logo">Smart<span>Contact</span></div>
+  <div class="key-tagline">Willow Properties</div>
+  <p class="key-sub">AI-powered contact prioritization for real estate agents. Enter your Anthropic API key to get started.</p>
   <input id="key-input" type="password" placeholder="sk-ant-..." autocomplete="off" />
   <button id="key-btn">Get Started →</button>
   <div id="key-error">Invalid key format. Should start with sk-ant-</div>
-  <p style="margin-top:20px;font-size:12px;color:#334155;">Your key is stored locally and never shared.</p>
+  <p class="key-note">Your key is stored locally and never shared.</p>
 </div>
 
 <!-- Main App -->
 <div id="app">
   <div class="header">
     <div class="header-top">
-      <div class="logo">Smart<span>Contact</span></div>
+      <div class="logo-wrap">
+        <div class="logo">Smart<span>Contact</span></div>
+        <div class="logo-sub">Willow Properties</div>
+      </div>
       <button class="reset-btn" onclick="resetKey()">Change Key</button>
     </div>
     <div class="stats">
@@ -192,9 +177,9 @@
       <div class="stat"><div class="stat-num white" id="stat-total">0</div><div class="stat-label">Total</div></div>
     </div>
     <div class="tabs">
-      <button class="tab active" onclick="setTab('all', this)">All</button>
-      <button class="tab" onclick="setTab('week', this)"><span class="dot dot-red"></span>This Week</button>
-      <button class="tab" onclick="setTab('soon', this)"><span class="dot dot-amber"></span>Soon</button>
+      <button class="tab active" onclick="setTab('all',this)">All</button>
+      <button class="tab" onclick="setTab('week',this)"><span class="dot dot-red"></span>This Week</button>
+      <button class="tab" onclick="setTab('soon',this)"><span class="dot dot-amber"></span>Soon</button>
     </div>
   </div>
 
@@ -203,17 +188,21 @@
   <div class="add-section">
     <div class="add-form" id="add-form">
       <div class="form-row">
-        <input class="form-input" id="f-name" placeholder="Contact name" />
-        <input class="form-input" id="f-type" placeholder="Type (Buyer, Seller...)" />
+        <input class="form-input" id="f-name" placeholder="Full name" />
+        <input class="form-input" id="f-phone" placeholder="Phone number" type="tel" />
       </div>
       <div class="form-row">
+        <input class="form-input" id="f-type" placeholder="Type (Buyer, Seller...)" />
         <input class="form-input" id="f-days" type="number" placeholder="Days since contact" min="0" />
+      </div>
+      <div class="form-row">
         <select class="form-input" id="f-urgency">
           <option value="week">This Week</option>
           <option value="soon">Soon</option>
         </select>
+        <input class="form-input" id="f-email" placeholder="Email (optional)" type="email" />
       </div>
-      <input class="form-input" id="f-flag" placeholder="Urgency reason (e.g. Pre-approval expires in 2 weeks)" style="margin-bottom:10px;" />
+      <input class="form-input" id="f-flag" placeholder="Urgency reason (e.g. Pre-approval expires in 2 weeks)" style="margin-bottom:8px;" />
       <div class="form-actions">
         <button class="save-btn" onclick="saveContact()">Add Contact</button>
         <button class="cancel-btn" onclick="toggleForm(false)">Cancel</button>
@@ -222,22 +211,37 @@
     <button class="add-btn" id="add-toggle" onclick="toggleForm(true)">+ Add Contact</button>
   </div>
 
-  <div class="footer">SmartContact · Willow Properties · Powered by Claude AI</div>
+  <div class="footer">Smart<strong>Contact</strong> · <strong>Willow Properties</strong> · Powered by Claude AI</div>
 </div>
 
 <script>
-// ── State ──────────────────────────────────────────────────────────────────────
-let contacts = [
-  { id: 1, name: "Sarah Mitchell", type: "Active Buyer", days: 8, urgency: "week", flag: "Pre-approval expires in 3 weeks" },
-  { id: 2, name: "Tom & Lisa Gerardi", type: "Seller", days: 5, urgency: "week", flag: "No showings in 9 days" },
-  { id: 3, name: "Marcus Webb", type: "Past Client", days: 21, urgency: "soon", flag: "Anniversary in 2 weeks — referral opportunity" },
-  { id: 4, name: "Priya Nolan", type: "Active Buyer", days: 12, urgency: "week", flag: "Rate lock expires soon" },
-  { id: 5, name: "James & Carol Okafor", type: "Seller", days: 30, urgency: "soon", flag: "Price reduction discussion overdue" },
-  { id: 6, name: "Dana Fiorentino", type: "Lead", days: 3, urgency: "soon", flag: "Requested info, no follow-up yet" },
+// ── Default contacts ───────────────────────────────────────────────────────────
+const DEFAULT_CONTACTS = [
+  { id: 1, name: "Sarah Mitchell", type: "Active Buyer", days: 8, urgency: "week", flag: "Pre-approval expires in 3 weeks", phone: "", email: "", contacted: false, contactedAt: null },
+  { id: 2, name: "Tom & Lisa Gerardi", type: "Seller", days: 5, urgency: "week", flag: "No showings in 9 days", phone: "", email: "", contacted: false, contactedAt: null },
+  { id: 3, name: "Marcus Webb", type: "Past Client", days: 21, urgency: "soon", flag: "Anniversary in 2 weeks — referral opportunity", phone: "", email: "", contacted: false, contactedAt: null },
+  { id: 4, name: "Priya Nolan", type: "Active Buyer", days: 12, urgency: "week", flag: "Rate lock expires soon", phone: "", email: "", contacted: false, contactedAt: null },
+  { id: 5, name: "James & Carol Okafor", type: "Seller", days: 30, urgency: "soon", flag: "Price reduction discussion overdue", phone: "", email: "", contacted: false, contactedAt: null },
+  { id: 6, name: "Dana Fiorentino", type: "Lead", days: 3, urgency: "soon", flag: "Requested info, no follow-up yet", phone: "", email: "", contacted: false, contactedAt: null },
 ];
+
+// ── State ──────────────────────────────────────────────────────────────────────
+let contacts = loadContacts();
 let tab = "all";
 let drafts = {};
+let draftMode = {}; // 'text' or 'email' per contact
 let nextId = 100;
+
+function loadContacts() {
+  try {
+    const saved = localStorage.getItem("sc_contacts");
+    return saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(DEFAULT_CONTACTS));
+  } catch { return JSON.parse(JSON.stringify(DEFAULT_CONTACTS)); }
+}
+
+function saveContacts() {
+  try { localStorage.setItem("sc_contacts", JSON.stringify(contacts)); } catch {}
+}
 
 // ── Key Management ─────────────────────────────────────────────────────────────
 function getKey() { return localStorage.getItem("sc_key") || ""; }
@@ -264,40 +268,57 @@ if (getKey()) showApp();
 
 // ── Render ─────────────────────────────────────────────────────────────────────
 function render() {
-  const week = contacts.filter(c => c.urgency === "week");
-  const soon = contacts.filter(c => c.urgency === "soon");
+  const week = contacts.filter(c => c.urgency === "week" && !c.contacted);
+  const soon = contacts.filter(c => c.urgency === "soon" && !c.contacted);
   document.getElementById("stat-week").textContent = week.length;
   document.getElementById("stat-soon").textContent = soon.length;
   document.getElementById("stat-total").textContent = contacts.length;
 
-  const filtered = tab === "all" ? contacts : contacts.filter(c => c.urgency === tab);
-  const list = document.getElementById("contact-list");
+  let filtered = tab === "all" ? contacts : contacts.filter(c => c.urgency === tab);
+  // Sort: not contacted first, then contacted
+  filtered = [...filtered.filter(c => !c.contacted), ...filtered.filter(c => c.contacted)];
 
-  if (filtered.length === 0) {
-    list.innerHTML = `<div class="empty">No contacts in this view.</div>`; return;
-  }
+  const list = document.getElementById("contact-list");
+  if (filtered.length === 0) { list.innerHTML = `<div class="empty">No contacts in this view.</div>`; return; }
 
   list.innerHTML = filtered.map(c => {
-    const draft = drafts[c.id] || "";
+    const textDraft = drafts[c.id]?.text || "";
+    const emailDraft = drafts[c.id]?.email || "";
+    const mode = draftMode[c.id] || "text";
+    const activeDraft = mode === "text" ? textDraft : emailDraft;
+    const hasDraft = textDraft || emailDraft;
+    const contactedLabel = c.contacted
+      ? `✓ Contacted${c.contactedAt ? " · " + new Date(c.contactedAt).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : ""}`
+      : "Mark Contacted";
+
     return `
-    <div class="contact-card ${c.urgency === "week" ? "urgent" : "soon"}" id="card-${c.id}">
+    <div class="contact-card ${c.contacted ? "contacted" : c.urgency === "week" ? "urgent" : "soon"}" id="card-${c.id}">
       <div class="card-header">
         <div>
           <div class="card-name">${c.name}</div>
           <div class="card-meta">${c.type} · ${c.days} days ago</div>
+          ${c.phone ? `<div class="card-phone">📞 ${c.phone}</div>` : ""}
         </div>
-        <span class="badge ${c.urgency === "week" ? "badge-red" : "badge-amber"}">
-          ${c.urgency === "week" ? "This Week" : "Soon"}
+        <span class="badge ${c.contacted ? "badge-green" : c.urgency === "week" ? "badge-red" : "badge-amber"}">
+          ${c.contacted ? "Contacted" : c.urgency === "week" ? "This Week" : "Soon"}
         </span>
       </div>
-      <div class="urgency-flag ${c.urgency === "week" ? "red" : ""}">⚡ ${c.flag}</div>
-      <div class="card-actions">
-        <button class="draft-btn" id="btn-${c.id}" onclick="generateDraft(${c.id})">✨ AI Draft Message</button>
-        <button class="call-btn">📞</button>
+      <div class="urgency-flag ${c.contacted ? "green" : c.urgency === "week" ? "red" : ""}">
+        ${c.contacted ? "✓" : "⚡"} ${c.flag}
       </div>
-      <div class="draft-output ${draft ? "visible" : ""}" id="draft-${c.id}">
-        ${draft ? draft : ""}
-        ${draft ? `<button class="draft-copy" onclick="copyDraft(${c.id})">Copy message</button>` : ""}
+      <div class="card-actions">
+        <button class="draft-btn" id="btn-${c.id}" onclick="generateDraft(${c.id})">✨ AI Draft</button>
+        ${c.phone ? `<a class="call-btn" href="tel:${c.phone.replace(/\D/g,"")}">📞</a>` : ""}
+        <button class="contacted-btn ${c.contacted ? "done" : ""}" onclick="toggleContacted(${c.id})">${contactedLabel}</button>
+      </div>
+      ${hasDraft ? `
+      <div class="draft-tabs">
+        <button class="draft-tab ${mode==="text"?"active":""}" onclick="setDraftMode(${c.id},'text')">Text</button>
+        <button class="draft-tab ${mode==="email"?"active":""}" onclick="setDraftMode(${c.id},'email')">Email</button>
+      </div>` : ""}
+      <div class="draft-output ${activeDraft ? "visible" : ""}" id="draft-${c.id}">
+        ${activeDraft || ""}
+        ${activeDraft ? `<div class="draft-actions-row"><button class="draft-copy" onclick="copyDraft(${c.id})">Copy</button></div>` : ""}
       </div>
     </div>`;
   }).join("");
@@ -311,15 +332,34 @@ function setTab(t, el) {
   render();
 }
 
+// ── Mark Contacted ─────────────────────────────────────────────────────────────
+function toggleContacted(id) {
+  const c = contacts.find(x => x.id === id);
+  if (!c) return;
+  c.contacted = !c.contacted;
+  c.contactedAt = c.contacted ? Date.now() : null;
+  saveContacts();
+  render();
+}
+
+// ── Draft Mode Toggle ──────────────────────────────────────────────────────────
+function setDraftMode(id, mode) {
+  draftMode[id] = mode;
+  render();
+}
+
 // ── AI Draft ──────────────────────────────────────────────────────────────────
 async function generateDraft(id) {
   const c = contacts.find(x => x.id === id);
   const btn = document.getElementById(`btn-${id}`);
   const out = document.getElementById(`draft-${id}`);
+  if (!drafts[id]) drafts[id] = {};
+  const mode = draftMode[id] || "text";
+
   btn.disabled = true;
   btn.textContent = "Generating…";
 
-  const prompt = `You are a real estate agent's assistant. Write a short, warm, natural follow-up text message (2-3 sentences max) for this contact:
+  const textPrompt = `You are a real estate agent's assistant. Write a short, warm, natural follow-up TEXT MESSAGE (2-3 sentences max) for this contact:
 
 Name: ${c.name}
 Type: ${c.type}
@@ -333,31 +373,49 @@ Rules:
 - No hashtags, no emojis unless very natural
 - Plain text only, no quotes around the message`;
 
+  const emailPrompt = `You are a real estate agent's assistant. Write a short, warm follow-up EMAIL for this contact. Format as:
+Subject: [subject line]
+
+[email body — 3-5 sentences, warm and professional]
+
+Contact details:
+Name: ${c.name}
+Type: ${c.type}
+Days since last contact: ${c.days}
+Urgency: ${c.flag}
+
+Rules:
+- Professional but warm tone
+- Reference the urgency naturally
+- Clear call to action
+- No fluff, no generic phrases
+- Plain text only`;
+
   try {
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": getKey(),
-        "anthropic-version": "2023-06-01",
-        "anthropic-dangerous-direct-browser-access": "true"
-      },
-      body: JSON.stringify({
-        model: "claude-sonnet-4-6",
-        max_tokens: 300,
-        messages: [{ role: "user", content: prompt }]
+    // Generate both text and email drafts in parallel
+    const [textRes, emailRes] = await Promise.all([
+      fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-api-key": getKey(), "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
+        body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 200, messages: [{ role: "user", content: textPrompt }] })
+      }),
+      fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-api-key": getKey(), "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
+        body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 400, messages: [{ role: "user", content: emailPrompt }] })
       })
-    });
-    if (!res.ok) {
-      const errData = await res.json().catch(() => ({}));
-      throw new Error(errData?.error?.message || `HTTP ${res.status}`);
-    }
-    const data = await res.json();
-    if (data.error) throw new Error(data.error.message);
-    const text = data.content?.[0]?.text || "Could not generate draft.";
-    drafts[id] = text;
-    out.innerHTML = `${text}<br><button class="draft-copy" onclick="copyDraft(${id})">Copy message</button>`;
-    out.classList.add("visible");
+    ]);
+
+    if (!textRes.ok) { const e = await textRes.json().catch(()=>({})); throw new Error(e?.error?.message || `HTTP ${textRes.status}`); }
+    if (!emailRes.ok) { const e = await emailRes.json().catch(()=>({})); throw new Error(e?.error?.message || `HTTP ${emailRes.status}`); }
+
+    const textData = await textRes.json();
+    const emailData = await emailRes.json();
+
+    drafts[id].text = textData.content?.[0]?.text || "";
+    drafts[id].email = emailData.content?.[0]?.text || "";
+    draftMode[id] = "text";
+    render();
   } catch (err) {
     out.innerHTML = `<span style="color:#dc2626;">Error: ${err.message}</span>`;
     out.classList.add("visible");
@@ -368,10 +426,11 @@ Rules:
 }
 
 function copyDraft(id) {
-  navigator.clipboard.writeText(drafts[id] || "");
-  const btn = event.target;
-  btn.textContent = "Copied!";
-  setTimeout(() => btn.textContent = "Copy message", 1500);
+  const mode = draftMode[id] || "text";
+  const text = drafts[id]?.[mode] || "";
+  navigator.clipboard.writeText(text);
+  event.target.textContent = "Copied!";
+  setTimeout(() => event.target.textContent = "Copy", 1500);
 }
 
 // ── Add Contact ───────────────────────────────────────────────────────────────
@@ -383,13 +442,16 @@ function toggleForm(show) {
 
 function saveContact() {
   const name = document.getElementById("f-name").value.trim();
+  const phone = document.getElementById("f-phone").value.trim();
   const type = document.getElementById("f-type").value.trim() || "Contact";
   const days = parseInt(document.getElementById("f-days").value) || 0;
   const urgency = document.getElementById("f-urgency").value;
+  const email = document.getElementById("f-email").value.trim();
   const flag = document.getElementById("f-flag").value.trim() || "Follow up needed";
   if (!name) { document.getElementById("f-name").focus(); return; }
-  contacts.unshift({ id: nextId++, name, type, days, urgency, flag });
-  ["f-name","f-type","f-days","f-flag"].forEach(id => document.getElementById(id).value = "");
+  contacts.unshift({ id: nextId++, name, phone, type, days, urgency, email, flag, contacted: false, contactedAt: null });
+  saveContacts();
+  ["f-name","f-phone","f-type","f-days","f-email","f-flag"].forEach(id => document.getElementById(id).value = "");
   toggleForm(false);
   render();
 }
