@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartContact · Willow Properties · Erika</title>
+<title>SmartContact · Willow Properties · Judy</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -191,7 +191,7 @@ button { font-family: 'DM Sans', sans-serif; }
 <!-- KEY SCREEN -->
 <div id="key-screen" style="display:none">
   <div class="logo">Smart<em>Contact</em></div>
-  <div class="brand">Willow Properties · Erika</div>
+  <div class="brand">Willow Properties · Judy</div>
   <p>AI-powered contact prioritization for real estate agents. Enter your Anthropic API key to get started.</p>
   <input id="key-input" type="password" placeholder="sk-ant-..." autocomplete="off">
   <button id="key-go">Get Started →</button>
@@ -205,7 +205,7 @@ button { font-family: 'DM Sans', sans-serif; }
     <div class="hdr-top">
       <div>
         <div class="hdr-logo">Smart<em>Contact</em></div>
-        <div class="hdr-brand">Willow Properties · Erika</div>
+        <div class="hdr-brand">Willow Properties · Judy</div>
       </div>
       <div class="hdr-btns">
       </div>
@@ -233,7 +233,7 @@ button { font-family: 'DM Sans', sans-serif; }
   </div>
 
   <div class="list" id="list"></div>
-  <div class="footer">Smart<strong>Contact</strong> · <strong>Willow Properties · Erika</strong> · Powered by Claude AI</div>
+  <div class="footer">Smart<strong>Contact</strong> · <strong>Willow Properties · Judy</strong> · Powered by Claude AI</div>
 </div>
 
 <!-- FAB -->
@@ -766,7 +766,7 @@ function buildDigest() {
 
   lines.push(`✅ COMPLETED TODAY: ${contacts.filter(c => c.done && c.doneAt && (Date.now()-c.doneAt)<86400000).length}`);
   lines.push('');
-  lines.push('— Powered by SmartContact · Willow Properties · Erika');
+  lines.push('— Powered by SmartContact · Willow Properties · Judy');
 
   document.getElementById('digest-content').textContent = lines.join('\n');
 }
