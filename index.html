@@ -210,30 +210,30 @@ border: none; cursor: pointer;
     <div class="hdr-top">
       <div>
         <div class="hdr-logo">Smart<em>Contact</em></div>
-        <div class="hdr-brand">Willow Properties · Erika · Your contacts. Prioritized. Ready to act.</div>
+        <div class="hdr-brand">Your prioritized contacts for today — ready to act</div>
       </div>
       <div class="hdr-btns">
-        <button class="t-btn" onclick="openDigest()" style="background:var(--gold);color:#fff;border-color:var(--gold);font-size:11px;padding:5px 10px;">📬 Today's Briefing</button>
+        <button class="t-btn" onclick="openDigest()" style="background:#c8992a;color:#0a1628;border-color:#c8992a;font-size:11px;padding:5px 10px;font-weight:700;">📬 Today's Briefing</button>
       </div>
     </div>
     <div class="alert-banner" id="alert-banner"></div>
     <div class="stats">
-      <div class="stat"><div class="stat-n r" id="s-urg">0</div><div class="stat-l">Contact Now</div></div>
-      <div class="stat"><div class="stat-n a" id="s-soon">0</div><div class="stat-l">This Week</div></div>
-      <div class="stat"><div class="stat-n g" id="s-done">0</div><div class="stat-l">Reached Out</div></div>
+      <div class="stat" style="border:1.5px solid rgba(214,63,63,.3)"><div class="stat-n r" id="s-urg">0</div><div class="stat-l" style="color:#d63f3f;font-weight:700;">Act Today</div></div>
+      <div class="stat"><div class="stat-n a" id="s-soon">0</div><div class="stat-l">Upcoming</div></div>
+      <div class="stat"><div class="stat-n g" id="s-done">0</div><div class="stat-l">Completed</div></div>
       <div class="stat"><div class="stat-n w" id="s-total">0</div><div class="stat-l">Total</div></div>
     </div>
     <div class="tabs">
-      <button class="tab on" onclick="setTab('all',this)">All Contacts</button>
-      <button class="tab" onclick="setTab('week',this)"><span class="tdot" style="background:var(--red)"></span>Contact Now</button>
-      <button class="tab" onclick="setTab('soon',this)"><span class="tdot" style="background:var(--amber)"></span>This Week</button>
-      <button class="tab" onclick="setTab('done',this)"><span class="tdot" style="background:#4ade80"></span>Reached Out</button>
+      <button class="tab on" onclick="setTab('all',this)">All</button>
+      <button class="tab" onclick="setTab('week',this)"><span class="tdot" style="background:#d63f3f"></span>Act Today</button>
+      <button class="tab" onclick="setTab('soon',this)"><span class="tdot" style="background:#df8b29"></span>Upcoming</button>
+      <button class="tab" onclick="setTab('done',this)"><span class="tdot" style="background:#4ade80"></span>Completed</button>
     </div>
   </div>
 
-  <div class="toolbar">
-    <button class="t-btn" onclick="exportCSV()">⬇ Backup</button>
-    <button class="t-btn" onclick="document.getElementById('imp').click()">⬆ Import Contacts</button>
+  <div class="toolbar" style="justify-content:flex-end;padding:6px 14px 2px;">
+    <button class="t-btn" style="font-size:10px;padding:4px 8px;color:#94a3b8;border-color:#e4e1dc;" onclick="exportCSV()">⬇ Backup</button>
+    <button class="t-btn" style="font-size:10px;padding:4px 8px;color:#94a3b8;border-color:#e4e1dc;" onclick="document.getElementById('imp').click()">⬆ Import</button>
     <input type="file" id="imp" accept=".csv" style="display:none" onchange="importCSV(event)">
   </div>
 
@@ -243,7 +243,9 @@ border: none; cursor: pointer;
 
 <!-- FAB -->
 
-<button class="fab" onclick="openModal(null)">+</button>
+<button class="fab" onclick="openModal(null)" title="Add Contact">
+  <span style="font-size:22px;line-height:1;">+</span>
+</button>
 
 <!-- MODAL -->
 
@@ -425,60 +427,61 @@ function cardHTML(c) {
 
   const doneLabel = c.done
     ? `✓ ${c.doneAt ? new Date(c.doneAt).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : 'Done'}`
-    : 'Mark Reached Out';
+    : 'Mark Completed';
 
-  const scoreLabel = sc >= 75 ? 'Contact today' : sc >= 50 ? 'Contact this week' : 'On your radar';
+  const scoreLabel = sc >= 75 ? 'Act today' : sc >= 50 ? 'Act this week' : 'On your radar';
   const dayLabel = c.days === 0 ? 'today' : c.days === 1 ? '1 day ago' : `${c.days} days ago`;
+  const shortFlag = (c.flag || '').replace(/^Purchase date [^\s]+ [-–] /i, '').replace(/^why now:\s*/i, '');
 
   return `
-<div class="card ${c.done ? 'done' : c.pri === 'week' ? 'urgent' : 'soon'}" id="card-${c.id}">
+<div class="card ${c.done ? 'done' : c.pri === 'week' ? 'urgent' : 'soon'}" id="card-${c.id}" style="margin-bottom:14px;">
+
   <div class="card-head">
-    <div>
-      <div class="card-name">${esc(c.name)}</div>
-      <div class="card-meta">${esc(c.type)} · ${esc(c.stage)} · Last contact: ${dayLabel}</div>
-      ${c.phone ? `<div class="card-phone">📞 ${esc(c.phone)}</div>` : ''}
+    <div style="flex:1">
+      <div class="card-name" style="font-size:17px;">${esc(c.name)}</div>
+      <div class="card-meta" style="margin-top:3px;">${esc(c.type)} · ${esc(c.stage)} · ${dayLabel}</div>
+      ${c.phone ? `<div class="card-phone" style="margin-top:2px;">📞 ${esc(c.phone)}</div>` : ''}
     </div>
     <div>
-      <span class="badge ${c.done ? 'g' : c.pri === 'week' ? 'r' : 'a'}">${c.done ? 'Reached Out' : c.pri === 'week' ? 'Contact Now' : 'This Week'}</span>
+      <span class="badge ${c.done ? 'g' : c.pri === 'week' ? 'r' : 'a'}">${c.done ? 'Completed' : c.pri === 'week' ? 'Act Now' : 'Upcoming'}</span>
     </div>
   </div>
 
-  <div class="score-wrap">
+  <div class="score-wrap" style="padding-bottom:4px;">
     <div class="score-bg"><div class="score-fill" style="width:${sc}%;background:${col}"></div></div>
     <div style="text-align:right;min-width:90px;">
-      <div class="score-num" style="color:${col}">Score: ${sc}/99</div>
-      <div style="font-size:9px;color:${col};opacity:.8;">${scoreLabel}</div>
+      <div class="score-num" style="color:${col};">Score: ${sc}/99</div>
+      <div style="font-size:9px;color:${col};opacity:.85;font-weight:600;">${scoreLabel}</div>
     </div>
   </div>
 
-  <div style="margin:0 11px 5px;font-size:10px;color:var(--muted);">Score = days since contact + deal stage + urgency signals</div>
+  <div style="margin:0 11px 8px;font-size:10px;color:#94a3b8;">Based on timing, deal stage, and activity</div>
 
-  <div class="stages">
+  <div class="stages" style="padding-bottom:6px;">
     ${STAGES.map(s => `<button class="sp${c.stage === s ? ' on' : ''}" onclick="setStage(${c.id},'${s}')">${s}</button>`).join('')}
   </div>
 
-  <div class="flag ${c.done ? 'g' : c.pri === 'week' ? 'r' : ''}">
-    ${c.done ? '✓ Contacted' : '⚡ Why now:'} ${esc(c.flag)}
+  <div style="margin:0 11px 10px;padding:8px 12px;border-radius:8px;background:#fffbeb;border-left:3px solid #c8992a;font-size:13px;font-weight:600;color:#92400e;">
+    ⚡ ${esc(shortFlag)}
   </div>
 
-  <div class="fu-row">
-    📅 Schedule next follow-up: <input type="date" value="${c.fu || ''}" onchange="setFU(${c.id},this.value)" placeholder="Pick a date">
+  <div class="fu-row" style="padding-bottom:10px;font-size:11px;opacity:.7;">
+    📅 Next follow-up: <input type="date" value="${c.fu || ''}" onchange="setFU(${c.id},this.value)">
   </div>
 
-  <div class="acts">
-    <button class="ab primary" id="btn-${c.id}" onclick="genDraft(${c.id})">✨ Generate Message</button>
-    ${c.phone ? `<a class="ab call" href="tel:${c.phone.replace(/\D/g,'')}">📞 Call</a>` : ''}
+  <div style="padding:0 11px 8px;">
+    <button class="ab primary" id="btn-${c.id}" onclick="genDraft(${c.id})" style="width:100%;padding:12px;font-size:14px;border-radius:10px;margin-bottom:8px;">✨ Draft Message</button>
+    <div style="display:flex;gap:6px;">
+      ${c.phone ? `<a class="ab call" href="tel:${c.phone.replace(/\D/g,'')}" style="flex:1;justify-content:center;display:flex;align-items:center;padding:9px;text-decoration:none;">📞 Call</a>` : ''}
+      <button class="ab mark${c.done ? ' on' : ''}" onclick="toggleDone(${c.id})" style="flex:1;padding:9px;">${doneLabel}</button>
+    </div>
   </div>
 
-  <div class="acts" style="padding-top:0">
-    <button class="ab mark${c.done ? ' on' : ''}" onclick="toggleDone(${c.id})">${doneLabel}</button>
-    <button class="ab edit" onclick="openModal(${c.id})">✏️ Edit</button>
-    ${c.date ? `<button class="ab anniv" id="anniv-${c.id}" onclick="sendAnniv(${c.id})">🎉 Anniversary</button>` : ''}
-  </div>
-
-  <div class="acts" style="padding-top:0">
-    <button class="ab market" id="mkt-${c.id}" onclick="genMarket(${c.id})">📊 Market Update</button>
-    <button class="ab coach" onclick="toggleCoach(${c.id})">💬 Handle Objection</button>
+  <div style="padding:0 11px 10px;display:flex;gap:5px;flex-wrap:wrap;">
+    <button class="ab edit" onclick="openModal(${c.id})" style="font-size:11px;padding:5px 10px;">✏️ Edit</button>
+    ${c.date ? `<button class="ab anniv" id="anniv-${c.id}" onclick="sendAnniv(${c.id})" style="font-size:11px;padding:5px 10px;">🎉 Anniversary</button>` : ''}
+    <button class="ab market" id="mkt-${c.id}" onclick="genMarket(${c.id})" style="font-size:11px;padding:5px 10px;">📊 Market Update</button>
+    <button class="ab coach" onclick="toggleCoach(${c.id})" style="font-size:11px;padding:5px 10px;">💬 Handle Objection</button>
   </div>
 
   <div class="obj-row${d.objOpen ? ' on' : ''}" id="obj-${c.id}">
