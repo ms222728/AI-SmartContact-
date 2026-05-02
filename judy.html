@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartContact · Willow Properties</title>
+<title>SmartContact · Willow Properties · Judy</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -26,57 +26,57 @@
   --r: 12px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+body { font-family: 'DM Sans', sans-serif; background: #f5f4f1; color: #1a1a2e; min-height: 100vh; }
 button { font-family: 'DM Sans', sans-serif; }
 
 /* ─── KEY SCREEN ─── */
 #key-screen {
 display: flex; flex-direction: column; align-items: center; justify-content: center;
-min-height: 100vh; background: var(–navy); padding: 40px 24px;
+min-height: 100vh; background: #0a1628; padding: 40px 24px;
 }
 #key-screen .logo { font-family: ‘DM Serif Display’, serif; font-size: 2rem; color: #fff; }
-#key-screen .logo em { color: var(–gold); font-style: normal; }
-#key-screen .brand { font-size: 11px; color: var(–gold); letter-spacing: .15em; text-transform: uppercase; margin: 4px 0 24px; }
+#key-screen .logo em { color: #c8992a; font-style: normal; }
+#key-screen .brand { font-size: 11px; color: #c8992a; letter-spacing: .15em; text-transform: uppercase; margin: 4px 0 24px; }
 #key-screen p { color: #94a3b8; font-size: 14px; text-align: center; max-width: 320px; line-height: 1.6; margin-bottom: 28px; }
 #key-input {
 width: 100%; max-width: 360px; padding: 13px 16px; border-radius: 10px;
-border: 1px solid #1e3a5f; background: var(–navy2); color: #fff;
+border: 1px solid #1e3a5f; background: #111e35; color: #fff;
 font-family: monospace; font-size: 14px; margin-bottom: 10px; outline: none;
 }
-#key-input:focus { border-color: var(–accent); }
+#key-input:focus { border-color: #0f4c81; }
 #key-go {
 width: 100%; max-width: 360px; padding: 13px; border-radius: 10px;
-background: var(–accent); color: #fff; font-size: 15px; font-weight: 600;
+background: #0f4c81; color: #fff; font-size: 15px; font-weight: 600;
 border: none; cursor: pointer;
 }
 #key-err { color: #f87171; font-size: 13px; margin-top: 8px; display: none; }
 #key-note { color: #334155; font-size: 12px; margin-top: 16px; }
 
 /* ─── APP ─── */
-#app { display: none; padding-bottom: 80px; }
+#app { display: block; padding-bottom: 80px; }
 
 /* HEADER */
-.hdr { background: var(–navy); padding: 14px 16px 0; position: sticky; top: 0; z-index: 100; }
+.hdr { background: #0a1628; padding: 14px 16px 0; position: sticky; top: 0; z-index: 100; }
 .hdr-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.hdr-logo { font-family: ‘DM Serif Display’, serif; color: #fff; font-size: 1.1rem; }
-.hdr-logo em { color: var(–gold); font-style: normal; }
-.hdr-brand { font-size: 9px; color: var(–gold); letter-spacing: .12em; text-transform: uppercase; }
+.hdr-logo { font-family: ‘DM Serif Display’, Georgia, serif; color: #fff; font-size: 1.1rem; }
+.hdr-logo em { color: #c8992a; font-style: normal; }
+.hdr-brand { font-size: 9px; color: #c8992a; letter-spacing: .12em; text-transform: uppercase; }
 .hdr-btns { display: flex; gap: 6px; }
 .hdr-btn { background: none; border: 1px solid #1e3a5f; color: #64748b; font-size: 11px; padding: 4px 9px; border-radius: 6px; cursor: pointer; }
 .hdr-btn:hover { color: #94a3b8; }
 
 /* ALERT BANNER */
-.alert-banner { display: none; background: #1e3a5f; border-left: 3px solid var(–gold); padding: 8px 16px; font-size: 12px; color: #e2e8f0; gap: 6px; flex-direction: column; }
+.alert-banner { display: none; background: #1e3a5f; border-left: 3px solid #c8992a; padding: 8px 16px; font-size: 12px; color: #e2e8f0; gap: 6px; flex-direction: column; }
 .alert-banner.on { display: flex; }
 .alert-row { display: flex; align-items: center; gap: 6px; }
-.alert-dot { width: 6px; height: 6px; border-radius: 50%; background: var(–gold); flex-shrink: 0; }
+.alert-dot { width: 6px; height: 6px; border-radius: 50%; background: #c8992a; flex-shrink: 0; }
 
 /* STATS */
 .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 12px; }
-.stat { background: var(–navy2); border-radius: 9px; padding: 8px 4px; text-align: center; }
-.stat-n { font-family: ‘DM Serif Display’, serif; font-size: 1.35rem; font-weight: 700; }
-.stat-n.r { color: var(–red); }
-.stat-n.a { color: var(–amber); }
+.stat { background: #111e35; border-radius: 9px; padding: 8px 4px; text-align: center; }
+.stat-n { font-family: ‘DM Serif Display’, Georgia, serif; font-size: 1.35rem; font-weight: 700; }
+.stat-n.r { color: #d63f3f; }
+.stat-n.a { color: #df8b29; }
 .stat-n.g { color: #4ade80; }
 .stat-n.w { color: #fff; }
 .stat-l { font-size: 9px; color: #64748b; text-transform: uppercase; letter-spacing: .04em; margin-top: 1px; }
@@ -84,33 +84,33 @@ border: none; cursor: pointer;
 /* TABS */
 .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
 .tabs::-webkit-scrollbar { display: none; }
-.tab { padding: 7px 12px; border-radius: 18px 18px 0 0; font-size: 12px; font-weight: 500; border: none; cursor: pointer; background: var(–navy2); color: #64748b; white-space: nowrap; }
-.tab.on { background: var(–bg); color: var(–text); }
+.tab { padding: 7px 12px; border-radius: 18px 18px 0 0; font-size: 12px; font-weight: 500; border: none; cursor: pointer; background: #111e35; color: #64748b; white-space: nowrap; }
+.tab.on { background: #f5f4f1; color: #1a1a2e; }
 .tdot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 3px; }
 
 /* TOOLBAR */
 .toolbar { display: flex; gap: 8px; padding: 10px 14px 4px; }
-.t-btn { padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; border: 1px solid var(–border); background: var(–white); color: var(–muted); cursor: pointer; }
-.t-btn:hover { border-color: var(–accent); color: var(–accent); }
+.t-btn { padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; border: 1px solid #e4e1dc; background: #ffffff; color: #6b7280; cursor: pointer; }
+.t-btn:hover { border-color: #0f4c81; color: #0f4c81; }
 
 /* LIST */
 .list { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
-.empty { text-align: center; color: var(–muted); font-size: 14px; padding: 48px 24px; }
+.empty { text-align: center; color: #6b7280; font-size: 14px; padding: 48px 24px; }
 
 /* CARD */
-.card { background: var(–white); border-radius: var(–r); border: 1.5px solid var(–border); overflow: hidden; }
-.card.urgent { border-left: 4px solid var(–red); }
-.card.soon { border-left: 4px solid var(–amber); }
-.card.done { border-left: 4px solid var(–green); opacity: .75; }
+.card { background: #ffffff; border-radius: 12px; border: 1.5px solid #e4e1dc; overflow: hidden; }
+.card.urgent { border-left: 4px solid #d63f3f; }
+.card.soon { border-left: 4px solid #df8b29; }
+.card.done { border-left: 4px solid #2a8c5a; opacity: .75; }
 
 .card-head { display: flex; align-items: flex-start; justify-content: space-between; padding: 11px 11px 6px; }
 .card-name { font-weight: 700; font-size: 15px; }
-.card-meta { font-size: 11px; color: var(–muted); margin-top: 2px; }
-.card-phone { font-size: 11px; color: var(–accent); margin-top: 1px; }
+.card-meta { font-size: 11px; color: #6b7280; margin-top: 2px; }
+.card-phone { font-size: 11px; color: #0f4c81; margin-top: 1px; }
 .badge { font-size: 10px; font-weight: 700; letter-spacing: .05em; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; }
-.badge.r { background: #fef2f2; color: var(–red); }
-.badge.a { background: #fffbeb; color: var(–amber); }
-.badge.g { background: #f0fdf4; color: var(–green); }
+.badge.r { background: #fef2f2; color: #d63f3f; }
+.badge.a { background: #fffbeb; color: #df8b29; }
+.badge.g { background: #f0fdf4; color: #2a8c5a; }
 
 /* SCORE BAR */
 .score-wrap { display: flex; align-items: center; gap: 8px; padding: 0 11px 7px; }
@@ -121,46 +121,53 @@ border: none; cursor: pointer;
 /* STAGES */
 .stages { display: flex; gap: 4px; padding: 0 11px 7px; overflow-x: auto; scrollbar-width: none; }
 .stages::-webkit-scrollbar { display: none; }
-.sp { font-size: 10px; padding: 3px 8px; border-radius: 20px; border: 1px solid var(–border); background: var(–white); color: var(–muted); cursor: pointer; white-space: nowrap; }
-.sp.on { background: var(–navy); color: #fff; border-color: var(–navy); }
+.sp { font-size: 10px; padding: 3px 8px; border-radius: 20px; border: 1px solid #e4e1dc; background: #ffffff; color: #6b7280; cursor: pointer; white-space: nowrap; }
+.sp.on { background: #0a1628; color: #fff; border-color: #0a1628; }
 
 /* FLAG */
-.flag { margin: 0 11px 7px; padding: 6px 10px; border-radius: 7px; font-size: 12px; border-left: 3px solid var(–amber); background: #fff8f0; color: #92400e; }
-.flag.r { border-left-color: var(–red); background: #fff5f5; color: #991b1b; }
-.flag.g { border-left-color: var(–green); background: #f0fdf4; color: #166534; }
+.flag { margin: 0 11px 7px; padding: 6px 10px; border-radius: 7px; font-size: 12px; border-left: 3px solid #df8b29; background: #fff8f0; color: #92400e; }
+.flag.r { border-left-color: #d63f3f; background: #fff5f5; color: #991b1b; }
+.flag.g { border-left-color: #2a8c5a; background: #f0fdf4; color: #166534; }
 
 /* FOLLOWUP */
-.fu-row { display: flex; align-items: center; gap: 6px; padding: 0 11px 7px; font-size: 11px; color: var(–muted); }
-.fu-row input { padding: 3px 7px; border-radius: 6px; border: 1px solid var(–border); font-size: 11px; font-family: ‘DM Sans’, sans-serif; color: var(–text); outline: none; }
+.fu-row { display: flex; align-items: center; gap: 6px; padding: 0 11px 7px; font-size: 11px; color: #6b7280; }
+.fu-row input { padding: 3px 7px; border-radius: 6px; border: 1px solid #e4e1dc; font-size: 11px; font-family: ‘DM Sans’, sans-serif; color: #1a1a2e; outline: none; }
 
 /* ACTION ROWS */
 .acts { display: flex; gap: 5px; padding: 0 11px 7px; flex-wrap: wrap; }
 .ab { padding: 7px 10px; border-radius: 8px; font-size: 11px; font-weight: 600; border: none; cursor: pointer; display: flex; align-items: center; gap: 3px; white-space: nowrap; }
 .ab:disabled { opacity: .5; cursor: not-allowed; }
-.ab.primary { background: var(–navy); color: #fff; flex: 1; justify-content: center; }
-.ab.call { background: #f0fdf4; border: 1px solid #bbf7d0; color: var(–green); text-decoration: none; }
-.ab.mark { background: #f8faff; border: 1px solid #dbeafe; color: var(–accent); }
-.ab.mark.on { background: #f0fdf4; border-color: #bbf7d0; color: var(–green); }
-.ab.edit { background: #f8f8f8; border: 1px solid #e5e2dd; color: var(–muted); }
-.ab.market { background: #faf5ff; border: 1px solid #e9d5ff; color: var(–purple); }
-.ab.coach { background: #fff7ed; border: 1px solid #fed7aa; color: var(–orange); }
+.ab.primary { background: #0a1628; color: #fff; flex: 1; justify-content: center; }
+.ab.call { background: #f0fdf4; border: 1px solid #bbf7d0; color: #2a8c5a; text-decoration: none; }
+.ab.mark { background: #f8faff; border: 1px solid #dbeafe; color: #0f4c81; }
+.ab.mark.on { background: #f0fdf4; border-color: #bbf7d0; color: #2a8c5a; }
+.ab.edit { background: #f8f8f8; border: 1px solid #e5e2dd; color: #6b7280; }
+.ab.market { background: #faf5ff; border: 1px solid #e9d5ff; color: #6d4aad; }
+.ab.coach { background: #fff7ed; border: 1px solid #fed7aa; color: #c2410c; }
+.ab.email { background: #f0f9ff; border: 1px solid #bae6fd; color: #0369a1; text-decoration: none; }
+.ab.anniv { background: #fff0f6; border: 1px solid #fbc8dc; color: #be185d; }
+.ab.sms { background: #f0fdf4; border: 1px solid #bbf7d0; color: #2a8c5a; text-decoration: none; }
+
+/* DIGEST MODAL */
+.digest-box { background: #f8faff; border: 1px solid #dbeafe; border-radius: 10px; padding: 14px; margin: 0 0 12px; font-size: 13px; line-height: 1.7; color: #1e3a6e; white-space: pre-wrap; max-height: 320px; overflow-y: auto; }
+.digest-note { font-size: 11px; color: #6b7280; margin-bottom: 10px; }
 
 /* OBJECTION INPUT */
 .obj-row { display: none; gap: 6px; padding: 0 11px 7px; }
 .obj-row.on { display: flex; }
 .obj-in { flex: 1; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #fed7aa; font-size: 12px; font-family: ‘DM Sans’, sans-serif; outline: none; }
-.obj-go { padding: 8px 12px; border-radius: 8px; background: var(–orange); color: #fff; font-size: 12px; font-weight: 600; border: none; cursor: pointer; }
+.obj-go { padding: 8px 12px; border-radius: 8px; background: #c2410c; color: #fff; font-size: 12px; font-weight: 600; border: none; cursor: pointer; }
 
 /* DRAFT */
 .draft-tabs { display: flex; gap: 5px; padding: 0 11px 5px; }
-.dt { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; border: none; cursor: pointer; background: #f1f5f9; color: var(–muted); }
-.dt.on { background: var(–accent); color: #fff; }
+.dt { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; border: none; cursor: pointer; background: #f1f5f9; color: #6b7280; }
+.dt.on { background: #0f4c81; color: #fff; }
 .draft-out { display: none; margin: 0 11px 11px; padding: 10px 12px; border-radius: 9px; background: #f8faff; border: 1px solid #dbeafe; font-size: 13px; line-height: 1.65; color: #1e3a6e; white-space: pre-wrap; }
 .draft-out.on { display: block; }
-.copy-btn { display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 600; color: var(–accent); background: none; border: none; cursor: pointer; text-decoration: underline; padding: 0; }
+.copy-btn { display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 600; color: #0f4c81; background: none; border: none; cursor: pointer; text-decoration: underline; padding: 0; }
 
 /* FAB */
-.fab { position: fixed; bottom: 22px; right: 18px; width: 50px; height: 50px; border-radius: 50%; background: var(–accent); color: #fff; font-size: 26px; border: none; cursor: pointer; box-shadow: 0 4px 18px rgba(15,76,129,.45); z-index: 200; display: flex; align-items: center; justify-content: center; line-height: 1; }
+.fab { position: fixed; bottom: 22px; right: 18px; width: 50px; height: 50px; border-radius: 50%; background: #0f4c81; color: #fff; font-size: 26px; border: none; cursor: pointer; box-shadow: 0 4px 18px rgba(15,76,129,.45); z-index: 200; display: flex; align-items: center; justify-content: center; line-height: 1; }
 
 /* MODAL */
 .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 300; display: none; align-items: flex-end; justify-content: center; }
@@ -168,17 +175,17 @@ border: none; cursor: pointer;
 .modal { background: #fff; border-radius: 20px 20px 0 0; width: 100%; max-width: 520px; padding: 22px 18px 36px; max-height: 88vh; overflow-y: auto; }
 .modal-title { font-family: ‘DM Serif Display’, serif; font-size: 1.2rem; margin-bottom: 14px; }
 .fg { margin-bottom: 9px; }
-.fg label { display: block; font-size: 11px; font-weight: 600; color: var(–muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 3px; }
-.fi { width: 100%; padding: 9px 11px; border-radius: 8px; border: 1.5px solid var(–border); font-size: 13px; font-family: ‘DM Sans’, sans-serif; color: var(–text); outline: none; background: #fff; }
-.fi:focus { border-color: var(–accent); }
+.fg label { display: block; font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 3px; }
+.fi { width: 100%; padding: 9px 11px; border-radius: 8px; border: 1.5px solid #e4e1dc; font-size: 13px; font-family: ‘DM Sans’, sans-serif; color: #1a1a2e; outline: none; background: #fff; }
+.fi:focus { border-color: #0f4c81; }
 .fg2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 9px; }
 .modal-acts { display: flex; gap: 8px; margin-top: 14px; }
-.m-save { flex: 1; padding: 11px; border-radius: 9px; background: var(–accent); color: #fff; font-size: 14px; font-weight: 600; border: none; cursor: pointer; }
-.m-cancel { padding: 11px 16px; border-radius: 9px; background: #f1f5f9; color: var(–muted); font-size: 14px; border: none; cursor: pointer; }
-.m-del { padding: 11px 14px; border-radius: 9px; background: #fef2f2; color: var(–red); font-size: 14px; border: none; cursor: pointer; display: none; }
+.m-save { flex: 1; padding: 11px; border-radius: 9px; background: #0f4c81; color: #fff; font-size: 14px; font-weight: 600; border: none; cursor: pointer; }
+.m-cancel { padding: 11px 16px; border-radius: 9px; background: #f1f5f9; color: #6b7280; font-size: 14px; border: none; cursor: pointer; }
+.m-del { padding: 11px 14px; border-radius: 9px; background: #fef2f2; color: #d63f3f; font-size: 14px; border: none; cursor: pointer; display: none; }
 
 .footer { text-align: center; padding: 12px; font-size: 11px; color: #94a3b8; letter-spacing: .05em; }
-.footer strong { color: var(–gold); }
+.footer strong { color: #c8992a; }
 </style>
 
 </head>
@@ -186,9 +193,9 @@ border: none; cursor: pointer;
 
 <!-- KEY SCREEN -->
 
-<div id="key-screen">
+<div id="key-screen" style="display:none">
   <div class="logo">Smart<em>Contact</em></div>
-  <div class="brand">Judy Meucci · Willow Properties</div>
+  <div class="brand">Willow Properties · Judy</div>
   <p>AI-powered contact prioritization for real estate agents. Enter your Anthropic API key to get started.</p>
   <input id="key-input" type="password" placeholder="sk-ant-..." autocomplete="off">
   <button id="key-go">Get Started →</button>
@@ -203,40 +210,42 @@ border: none; cursor: pointer;
     <div class="hdr-top">
       <div>
         <div class="hdr-logo">Smart<em>Contact</em></div>
-        <div class="hdr-brand">Judy Meucci · Willow Properties</div>
+        <div class="hdr-brand">Your prioritized contacts for today — ready to act</div>
       </div>
       <div class="hdr-btns">
-        <button class="hdr-btn" onclick="resetKey()">Change Key</button>
+        <button class="t-btn" onclick="openDigest()" style="background:#c8992a;color:#0a1628;border-color:#c8992a;font-size:11px;padding:5px 10px;font-weight:700;">📬 Today's Briefing</button>
       </div>
     </div>
     <div class="alert-banner" id="alert-banner"></div>
     <div class="stats">
-      <div class="stat"><div class="stat-n r" id="s-urg">0</div><div class="stat-l">Urgent</div></div>
-      <div class="stat"><div class="stat-n a" id="s-soon">0</div><div class="stat-l">Soon</div></div>
-      <div class="stat"><div class="stat-n g" id="s-done">0</div><div class="stat-l">Done</div></div>
+      <div class="stat" style="border:1.5px solid rgba(214,63,63,.3)"><div class="stat-n r" id="s-urg">0</div><div class="stat-l" style="color:#d63f3f;font-weight:700;">At Risk</div></div>
+      <div class="stat"><div class="stat-n a" id="s-soon">0</div><div class="stat-l">Follow Up Soon</div></div>
+      <div class="stat"><div class="stat-n g" id="s-done">0</div><div class="stat-l">Done Today</div></div>
       <div class="stat"><div class="stat-n w" id="s-total">0</div><div class="stat-l">Total</div></div>
     </div>
     <div class="tabs">
       <button class="tab on" onclick="setTab('all',this)">All</button>
-      <button class="tab" onclick="setTab('week',this)"><span class="tdot" style="background:var(--red)"></span>Urgent</button>
-      <button class="tab" onclick="setTab('soon',this)"><span class="tdot" style="background:var(--amber)"></span>Soon</button>
+      <button class="tab" onclick="setTab('week',this)"><span class="tdot" style="background:#d63f3f"></span>At Risk</button>
+      <button class="tab" onclick="setTab('soon',this)"><span class="tdot" style="background:#df8b29"></span>Follow Up Soon</button>
       <button class="tab" onclick="setTab('done',this)"><span class="tdot" style="background:#4ade80"></span>Done</button>
     </div>
   </div>
 
-  <div class="toolbar">
-    <button class="t-btn" onclick="exportCSV()">⬇ Export Backup</button>
-    <button class="t-btn" onclick="document.getElementById('imp').click()">⬆ Import</button>
+  <div class="toolbar" style="justify-content:flex-end;padding:6px 14px 2px;">
+    <button class="t-btn" style="font-size:10px;padding:4px 8px;color:#94a3b8;border-color:#e4e1dc;" onclick="exportCSV()">⬇ Backup</button>
+    <button class="t-btn" style="font-size:10px;padding:4px 8px;color:#94a3b8;border-color:#e4e1dc;" onclick="document.getElementById('imp').click()">⬆ Import</button>
     <input type="file" id="imp" accept=".csv" style="display:none" onchange="importCSV(event)">
   </div>
 
   <div class="list" id="list"></div>
-  <div class="footer">Smart<strong>Contact</strong> · <strong>Judy Meucci</strong> · Powered by Claude AI</div>
+  <div class="footer">Smart<strong>Contact</strong> · <strong>Willow Properties · Judy</strong> · Powered by Claude AI</div>
 </div>
 
 <!-- FAB -->
 
-<button class="fab" onclick="openModal(null)">+</button>
+<button class="fab" onclick="openModal(null)" title="Add Contact">
+  <span style="font-size:22px;line-height:1;">+</span>
+</button>
 
 <!-- MODAL -->
 
@@ -250,7 +259,7 @@ border: none; cursor: pointer;
     <div class="fg2">
       <div class="fg"><label>Type</label>
         <select class="fi" id="m-type">
-          <option>Active Buyer</option><option>Seller</option><option>Past Client</option><option>Lead</option><option>Investor</option>
+          <option>Active Buyer</option><option>Active Seller</option><option>Lead</option><option>Past Client</option><option>Sphere</option>
         </select>
       </div>
       <div class="fg"><label>Deal Stage</label>
@@ -263,7 +272,7 @@ border: none; cursor: pointer;
       </div>
     </div>
     <div class="fg2">
-      <div class="fg"><label>Days Since Contact</label><input class="fi" id="m-days" type="number" min="0" placeholder="0"></div>
+      <div class="fg"><label>Last Contacted</label><input class="fi" id="m-lastcontact" type="date" placeholder=""></div>
       <div class="fg"><label>Priority</label>
         <select class="fi" id="m-pri">
           <option value="week">This Week (Urgent)</option>
@@ -273,7 +282,10 @@ border: none; cursor: pointer;
     </div>
     <div class="fg"><label>Email</label><input class="fi" id="m-email" type="email" placeholder="client@email.com"></div>
     <div class="fg"><label>Urgency Reason</label><input class="fi" id="m-flag" placeholder="e.g. Pre-approval expires in 3 weeks"></div>
-    <div class="fg"><label>Birthday / Anniversary</label><input class="fi" id="m-date" type="date"></div>
+    <div class="fg2">
+      <div class="fg"><label>🎂 Birthday</label><input class="fi" id="m-birthday" type="date"></div>
+      <div class="fg"><label>🏡 Home Anniversary</label><input class="fi" id="m-homeanniv" type="date"></div>
+    </div>
     <div class="modal-acts">
       <button class="m-save" onclick="saveModal()">Save Contact</button>
       <button class="m-cancel" onclick="closeModal()">Cancel</button>
@@ -282,69 +294,361 @@ border: none; cursor: pointer;
   </div>
 </div>
 
+<!-- DIGEST MODAL -->
+
+<div class="overlay" id="digest-overlay" onclick="bgCloseDigest(event)">
+  <div class="modal">
+    <div class="modal-title">📬 Today's Follow-Up Briefing</div>
+    <div class="digest-note">Your prioritized contact list for today. Copy and paste into an email to yourself, or review it here every morning before you start your day.</div>
+    <div class="digest-box" id="digest-content">Generating your digest…</div>
+    <div class="modal-acts">
+      <button class="m-save" onclick="copyDigest()">Copy Digest</button>
+      <button class="m-cancel" onclick="closeDigest()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ONBOARDING MODAL -->
+
+<div class="overlay" id="onboard-overlay">
+  <div class="modal" style="text-align:center;padding:32px 24px 40px;">
+    <div style="font-size:2.5rem;margin-bottom:12px;">👋</div>
+    <div style="font-family:'DM Serif Display',Georgia,serif;font-size:1.4rem;color:#0a1628;margin-bottom:10px;">Welcome to SmartContact</div>
+    <div style="font-size:14px;color:#6b7280;line-height:1.7;margin-bottom:28px;">Your daily follow-up tool. Here's all you need to know:</div>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;text-align:left;">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#0a1628;color:#c8992a;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div>
+          <div style="font-weight:700;font-size:14px;color:#0a1628;">See who needs attention</div>
+          <div style="font-size:12px;color:#6b7280;margin-top:2px;">Your contacts are ranked by urgency. The most important ones are at the top.</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#0a1628;color:#c8992a;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div>
+          <div style="font-weight:700;font-size:14px;color:#0a1628;">Tap "Draft Text Message"</div>
+          <div style="font-size:12px;color:#6b7280;margin-top:2px;">Pick your tone — Professional, Friendly, or Casual — and get a message ready to send.</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#0a1628;color:#c8992a;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div>
+          <div style="font-weight:700;font-size:14px;color:#0a1628;">Call, text, or email — done</div>
+          <div style="font-size:12px;color:#6b7280;margin-top:2px;">Mark them as contacted and move to the next one. Open it every morning.</div>
+        </div>
+      </div>
+    </div>
+    <button onclick="closeOnboard()" style="width:100%;padding:14px;border-radius:11px;background:#0a1628;color:#fff;font-size:15px;font-weight:700;border:none;cursor:pointer;">Let's Go →</button>
+    <div style="font-size:11px;color:#94a3b8;margin-top:12px;">This won't show again</div>
+  </div>
+</div>
+
+<script>
+  // GoatCounter Analytics — free, privacy-friendly
+  (function() {
+    try {
+      var s = document.createElement('script');
+      s.async = true;
+      s.dataset.goatcounter = 'https://ms222728.goatcounter.com/count';
+      s.src = '//gc.zgo.at/count.js';
+      document.head.appendChild(s);
+    } catch(e) {}
+  })();
+</script>
+
 <script>
 const STAGES = ['First Contact','Active','Under Contract','Closed'];
+const TYPES = ['Active Buyer','Active Seller','Lead','Past Client','Sphere'];
 
 const SEED = [
-  {id:1,name:'Casey White',phone:'860-287-4962',email:'casey_white@comcast.net',type:'Past Client',stage:'Closed',days:2690,pri:'soon',flag:'Past client — closed Dec 2018, 2690 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:2,name:'Kari White',phone:'860-235-2785',email:'Kari_white@comcast.net',type:'Past Client',stage:'Closed',days:2690,pri:'soon',flag:'Past client — closed Dec 2018, 2690 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:3,name:'Simon Cleetus',phone:'',email:'simoncleetus@yahoo.com',type:'Past Client',stage:'Closed',days:3889,pri:'soon',flag:'Past client — closed Sep 2015, 3889 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:4,name:'Anita Cleetus',phone:'(860)910-6100',email:'fastzfam@yahoo.com',type:'Past Client',stage:'Closed',days:3889,pri:'soon',flag:'Past client — closed Sep 2015, 3889 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:5,name:'Viliam Gorian',phone:'959-201-0364',email:'',type:'Past Client',stage:'Closed',days:1537,pri:'soon',flag:'Past client — closed Feb 2022, 1537 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:6,name:'Laura Gorian',phone:'862-377-9952',email:'lauralgorian@gmail.com',type:'Past Client',stage:'Closed',days:1537,pri:'soon',flag:'Past client — closed Feb 2022, 1537 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:7,name:'Tina Taylor',phone:'860-961-9728',email:'tmtayrn05@gmail.com',type:'Past Client',stage:'Closed',days:3278,pri:'soon',flag:'Past client — closed May 2017, 3278 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:8,name:'Myles Thomas',phone:'435-770-7928',email:'myles.c.thomas@gmail.com',type:'Past Client',stage:'Closed',days:3391,pri:'soon',flag:'Past client — closed Jan 2017, 3391 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:9,name:'Chelsea Thomas',phone:'',email:'chelseatomlinson@gmail.com',type:'Past Client',stage:'Closed',days:3391,pri:'soon',flag:'Past client — closed Jan 2017, 3391 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:10,name:'Ed McPherson',phone:'',email:'edwardmcpherson36@gmail.com',type:'Past Client',stage:'Closed',days:2908,pri:'soon',flag:'Past client — closed May 2018, 2908 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:11,name:'Kristin McPherson',phone:'860-367-6510',email:'kristinderbylove@yahoo.com',type:'Past Client',stage:'Closed',days:2908,pri:'soon',flag:'Past client — closed May 2018, 2908 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:12,name:'Dave Cruthers',phone:'860-884-2932',email:'Cruthers@sbcglobal.net',type:'Past Client',stage:'Closed',days:1052,pri:'soon',flag:'Past client — closed Jun 2023, 1052 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:13,name:'Jak Cruthers',phone:'860-884-0648',email:'jakanddave@gmail.com',type:'Past Client',stage:'Closed',days:1052,pri:'soon',flag:'Past client — closed Jun 2023, 1052 days since last contact',date:'',fu:'',done:false,doneAt:null},
-  {id:14,name:'Jennifer Gallaway',phone:'860-373-5496',email:'jauger21@yahoo.com',type:'Past Client',stage:'Closed',days:3601,pri:'soon',flag:'Past client — closed Jun 2016, 3601 days since last contact',date:'',fu:'',done:false,doneAt:null},
+  {id:1,name:'Casey White',phone:'860-287-4962',email:'casey_white@comcast.net',type:'Past Client',stage:'Closed',days:2690,pri:'soon',flag:'Past client — closed Dec 2018, 2690 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:2,name:'Kari White',phone:'860-235-2785',email:'Kari_white@comcast.net',type:'Past Client',stage:'Closed',days:2690,pri:'soon',flag:'Past client — closed Dec 2018, 2690 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:3,name:'Simon Cleetus',phone:'',email:'simoncleetus@yahoo.com',type:'Past Client',stage:'Closed',days:3889,pri:'soon',flag:'Past client — closed Sep 2015, 3889 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:4,name:'Anita Cleetus',phone:'(860)910-6100',email:'fastzfam@yahoo.com',type:'Past Client',stage:'Closed',days:3889,pri:'soon',flag:'Past client — closed Sep 2015, 3889 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:5,name:'Viliam Gorian',phone:'959-201-0364',email:'',type:'Past Client',stage:'Closed',days:1537,pri:'soon',flag:'Past client — closed Feb 2022, 1537 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:6,name:'Laura Gorian',phone:'862-377-9952',email:'lauralgorian@gmail.com',type:'Past Client',stage:'Closed',days:1537,pri:'soon',flag:'Past client — closed Feb 2022, 1537 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:7,name:'Tina Taylor',phone:'860-961-9728',email:'tmtayrn05@gmail.com',type:'Past Client',stage:'Closed',days:3278,pri:'soon',flag:'Past client — closed May 2017, 3278 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:8,name:'Myles Thomas',phone:'435-770-7928',email:'myles.c.thomas@gmail.com',type:'Past Client',stage:'Closed',days:3391,pri:'soon',flag:'Past client — closed Jan 2017, 3391 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:9,name:'Chelsea Thomas',phone:'',email:'chelseatomlinson@gmail.com',type:'Past Client',stage:'Closed',days:3391,pri:'soon',flag:'Past client — closed Jan 2017, 3391 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:10,name:'Ed McPherson',phone:'',email:'edwardmcpherson36@gmail.com',type:'Past Client',stage:'Closed',days:2908,pri:'soon',flag:'Past client — closed May 2018, 2908 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:11,name:'Kristin McPherson',phone:'860-367-6510',email:'kristinderbylove@yahoo.com',type:'Past Client',stage:'Closed',days:2908,pri:'soon',flag:'Past client — closed May 2018, 2908 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:12,name:'Dave Cruthers',phone:'860-884-2932',email:'Cruthers@sbcglobal.net',type:'Past Client',stage:'Closed',days:1052,pri:'soon',flag:'Past client — closed Jun 2023, 1052 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:13,name:'Jak Cruthers',phone:'860-884-0648',email:'jakanddave@gmail.com',type:'Past Client',stage:'Closed',days:1052,pri:'soon',flag:'Past client — closed Jun 2023, 1052 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
+  {id:14,name:'Jennifer Gallaway',phone:'860-373-5496',email:'jauger21@yahoo.com',type:'Past Client',stage:'Closed',days:3601,pri:'soon',flag:'Past client — closed Jun 2016, 3601 days since last contact',date:'',fu:'',done:false,doneAt:null,snoozed:null},
 ];
+
+// ── SUPABASE CONFIG ──────────────────────────────────────────────────────────
+const SUPABASE_URL = 'https://oxsjpxyotoshiazghzmr.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im94c2pweHlvdG9zaGlhemdoem1yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyNTUyNTksImV4cCI6MjA5MjgzMTI1OX0.j11oHxEE27yPHSEEhR0lZA7iWTYYq9HXDbTD-CDBi0E';
+const AGENT_NAME = 'judy'; // unique per agent file
+
+async function sbFetch(path, options = {}) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
+    ...options,
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': `Bearer ${SUPABASE_KEY}`,
+      'Content-Type': 'application/json',
+      'Prefer': options.prefer || '',
+      ...options.headers
+    }
+  });
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(err);
+  }
+  const text = await res.text();
+  return text ? JSON.parse(text) : null;
+}
+
+function toRow(c) {
+  return {
+    agent: AGENT_NAME,
+    name: c.name,
+    phone: c.phone || '',
+    email: c.email || '',
+    type: c.type || 'Active Buyer',
+    stage: c.stage || 'First Contact',
+    days: c.days || 0,
+    lastcontact: c.lastcontact || null,
+    pri: c.pri || 'soon',
+    flag: c.flag || '',
+    date: c.date || '',
+    fu: c.fu || '',
+    done: c.done || false,
+    done_at: c.doneAt || null,
+    snoozed: c.snoozed || null
+  };
+}
+
+function fromRow(r) {
+  return {
+    id: r.id,
+    name: r.name,
+    phone: r.phone || '',
+    email: r.email || '',
+    type: r.type || 'Active Buyer',
+    stage: r.stage || 'First Contact',
+    days: r.days || 0,
+    lastcontact: r.lastcontact || '',
+    pri: r.pri || 'soon',
+    flag: r.flag || '',
+    date: r.date || '',
+    fu: r.fu || '',
+    done: r.done || false,
+    doneAt: r.done_at || null,
+    snoozed: r.snoozed || null
+  };
+}
+
+async function loadContactsFromDB() {
+  try {
+    const rows = await sbFetch(`contacts?agent=eq.${AGENT_NAME}&order=id.asc`);
+    if (rows && rows.length > 0) return rows.map(fromRow);
+  } catch(e) { console.warn('Supabase load failed, using local', e); }
+  // Fallback to localStorage
+  try {
+    const s = localStorage.getItem('sc_judy_v1');
+    if (s) { const p = JSON.parse(s); if (Array.isArray(p) && p.length > 0) return p; }
+  } catch(e) {}
+  return JSON.parse(JSON.stringify(SEED));
+}
+
+async function persistToDB(c) {
+  try {
+    if (c.id >= 500 || typeof c.id === 'string') {
+      // New contact — insert
+      const row = toRow(c);
+      const result = await sbFetch('contacts?select=id', {
+        method: 'POST',
+        prefer: 'return=representation',
+        body: JSON.stringify(row)
+      });
+      if (result && result[0]) c.id = result[0].id;
+    } else {
+      // Existing — update
+      await sbFetch(`contacts?id=eq.${c.id}&agent=eq.${AGENT_NAME}`, {
+        method: 'PATCH',
+        body: JSON.stringify(toRow(c))
+      });
+    }
+  } catch(e) { console.warn('Supabase save failed', e); }
+  // Always keep localStorage as backup
+  try { localStorage.setItem('sc_judy_v1', JSON.stringify(contacts)); } catch(e) {}
+}
+
+async function deleteFromDB(id) {
+  try {
+    await sbFetch(`contacts?id=eq.${id}&agent=eq.${AGENT_NAME}`, { method: 'DELETE' });
+  } catch(e) { console.warn('Supabase delete failed', e); }
+}
+
+function loadContacts() {
+  try {
+    const s = localStorage.getItem('sc_judy_v1');
+    if (s) { const p = JSON.parse(s); if (Array.isArray(p) && p.length > 0) return p; }
+  } catch(e) {}
+  return JSON.parse(JSON.stringify(SEED));
+}
+function persist() {
+  try { localStorage.setItem('sc_judy_v1', JSON.stringify(contacts)); } catch(e) {}
+}
 
 let contacts = loadContacts();
 let tab = 'all';
-let drafts = {};   // {id: {text,email,market,coach,mode,objOpen}}
+let drafts = {};
 let editId = null;
 let nid = 500;
 
-function loadContacts() {
-  try { const s = localStorage.getItem('sc_judy'); return s ? JSON.parse(s) : JSON.parse(JSON.stringify(SEED)); }
-  catch { return JSON.parse(JSON.stringify(SEED)); }
-}
-function persist() { try { localStorage.setItem('sc_judy', JSON.stringify(contacts)); } catch {} }
-
 // ── SCORING ──────────────────────────────────────────────────────────────────
 function score(c) {
-  let s = Math.min(c.days * 2, 40);
-  s += c.pri === 'week' ? 30 : 15;
-  s += c.stage === 'Active' ? 20 : c.stage === 'Under Contract' ? 18 : c.stage === 'First Contact' ? 12 : 5;
+  if (c.snoozed && new Date(c.snoozed) > new Date()) return 1;
+  const t = c.type || 'Active Buyer';
+  const d = c.days || 0;
   const f = (c.flag || '').toLowerCase();
-  s += f.includes('expir') || f.includes('deadline') ? 10 : f.includes('overdue') || f.includes('no show') ? 8 : f.includes('referral') || f.includes('anniversar') ? 5 : 0;
+  let s = 0;
+
+  // Base score from days — weighted by contact type
+  if (t === 'Active Buyer') {
+    s += d <= 3 ? 10 : d <= 7 ? 35 : d <= 10 ? 50 : Math.min(d * 2, 60);
+    if (f.includes('expir') || f.includes('deadline') || f.includes('rate lock')) s += 25;
+    if (f.includes('showing') || f.includes('offer') || f.includes('inspection')) s += 20;
+  } else if (t === 'Active Seller') {
+    s += d <= 5 ? 10 : d <= 7 ? 35 : d <= 10 ? 50 : Math.min(d * 2, 60);
+    if (f.includes('showing') || f.includes('feedback') || f.includes('price')) s += 20;
+    if (f.includes('offer') || f.includes('open house')) s += 25;
+  } else if (t === 'Lead') {
+    s += d <= 2 ? 70 : d <= 7 ? 45 : d <= 14 ? 25 : 10;
+    if (f.includes('new') || f.includes('inquiry') || f.includes('requested')) s += 20;
+  } else if (t === 'Past Client') {
+    s += d <= 30 ? 5 : d <= 60 ? 20 : d <= 120 ? 35 : Math.min(d / 3, 50);
+    if (f.includes('referral') || f.includes('anniversar') || f.includes('birthday')) s += 20;
+  } else if (t === 'Sphere') {
+    s += d <= 60 ? 5 : d <= 90 ? 15 : d <= 180 ? 30 : Math.min(d / 4, 45);
+    if (f.includes('referral') || f.includes('event') || f.includes('birthday')) s += 15;
+  }
+
+  // Stage bonus
+  s += c.stage === 'Active' ? 10 : c.stage === 'Under Contract' ? 12 : 0;
+
   return Math.min(Math.round(s), 99);
 }
+
 function scoreCol(s) { return s >= 75 ? '#d63f3f' : s >= 50 ? '#df8b29' : '#2a8c5a'; }
 
+function scoreReason(c) {
+  const t = c.type || '';
+  const d = c.days || 0;
+  const f = (c.flag || '').toLowerCase();
+  if (f.includes('expir') || f.includes('rate lock')) return `Pre-approval or rate lock expiring + ${t}`;
+  if (f.includes('no showing') || f.includes('no show')) return `No showings + ${t}`;
+  if (f.includes('price')) return `Price discussion needed + ${t}`;
+  if (f.includes('offer')) return `Offer activity + ${t}`;
+  if (f.includes('new') || f.includes('inquiry')) return `New inquiry — respond quickly`;
+  if (f.includes('referral') || f.includes('anniversar')) return `Relationship opportunity + ${t}`;
+  if (d > 0) return `No contact in ${d} day${d===1?'':'s'} + ${t}`;
+  return t;
+}
+
+function urgencyBadge(c) {
+  if (c.done) return { label: 'Done ✓', color: '#2a8c5a', bg: '#f0fdf4' };
+  if (c.snoozed && new Date(c.snoozed) > new Date()) return { label: '💤 Snoozed', color: '#6b7280', bg: '#f8f8f8' };
+  const t = c.type || '';
+  const d = c.days || 0;
+  const f = (c.flag || '').toLowerCase();
+  const sc = score(c);
+
+  if (t === 'Sphere' || t === 'Past Client') {
+    if (f.includes('referral') || f.includes('anniversar') || f.includes('birthday')) return { label: '⚡ Relationship Opportunity', color: '#6d4aad', bg: '#faf5ff' };
+    if (d >= 90) return { label: '💬 Light Reconnect', color: '#0369a1', bg: '#f0f9ff' };
+    return { label: '💬 Light Reconnect', color: '#0369a1', bg: '#f0f9ff' };
+  }
+  if (t === 'Lead') {
+    if (d <= 2) return { label: '🔥 Respond Today', color: '#d63f3f', bg: '#fef2f2' };
+    if (d <= 7) return { label: '⚠️ At Risk', color: '#df8b29', bg: '#fffbeb' };
+    return { label: '⏳ Cooling Off', color: '#6b7280', bg: '#f8f8f8' };
+  }
+  if (f.includes('expir') || f.includes('rate lock') || f.includes('deadline')) return { label: '🔥 Needs Contact Today', color: '#d63f3f', bg: '#fef2f2' };
+  if (f.includes('offer') || f.includes('under contract')) return { label: '⚡ Opportunity', color: '#6d4aad', bg: '#faf5ff' };
+  if (sc >= 75) return { label: '🔥 Needs Contact Today', color: '#d63f3f', bg: '#fef2f2' };
+  if (sc >= 50) return { label: '⚠️ At Risk', color: '#df8b29', bg: '#fffbeb' };
+  return { label: '⏳ Cooling Off', color: '#6b7280', bg: '#f8f8f8' };
+}
+
+function improvedFlag(c) {
+  const flag = c.flag || '';
+  const f = flag.toLowerCase();
+  const t = c.type || '';
+  const d = c.days || 0;
+  if (f.includes('pre-approval') || f.includes('rate lock') || f.includes('expir')) return `⚡ Urgent: Pre-approval or rate lock expiring — act now`;
+  if (f.includes('no showing') || f.includes('no show')) return `⚡ Alert: No showings — listing may be stalling`;
+  if (f.includes('price reduction') || f.includes('overdue')) return `⚡ Overdue: Price reduction conversation needed`;
+  if (f.includes('offer')) return `⚡ Opportunity: Offer activity — follow up now`;
+  if (f.includes('new inquiry') || f.includes('respond within')) return `⚡ New Lead: Respond within 24 hours`;
+  if (f.includes('recent close') || f.includes('check in')) return `⚡ Opportunity: Recent close — ideal time to reconnect`;
+  if (f.includes('referral') || f.includes('anniversar')) return `⚡ Opportunity: Anniversary — referral potential`;
+  if ((t === 'Sphere' || t === 'Past Client') && d >= 60) return `💬 No contact in ${d} days — light reconnect`;
+  if (f.includes('relationship')) return `💬 ${flag}`;
+  const clean = flag.replace(/^Purchase date [^\s]+ [-–] /i,'').replace(/^why now:\s*/i,'');
+  return `⚡ ${clean}`;
+}
+
 // ── KEY ──────────────────────────────────────────────────────────────────────
-function getKey() { return localStorage.getItem('sc_key_judy') || ''; }
+function getKey() { try { return localStorage.getItem('sc_key') || ''; } catch { return ''; } }
 
 document.getElementById('key-go').onclick = () => {
   const v = document.getElementById('key-input').value.trim();
   if (!v.startsWith('sk-')) { document.getElementById('key-err').style.display = 'block'; return; }
-  localStorage.setItem('sc_key_judy', v);
+  try { localStorage.setItem('sc_key', v); } catch {}
   boot();
 };
 document.getElementById('key-input').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('key-go').click(); });
-function resetKey() { localStorage.removeItem('sc_key_judy'); location.reload(); }
+function resetKey() { try { localStorage.removeItem('sc_key'); } catch {} location.reload(); }
+
+function closeOnboard() {
+  document.getElementById('onboard-overlay').classList.remove('on');
+  try { localStorage.setItem('sc_onboarded', '1'); } catch(e) {}
+}
 
 function boot() {
   document.getElementById('key-screen').style.display = 'none';
   document.getElementById('app').style.display = 'block';
-  render();
+
+  // Show loading state while Supabase loads
+  document.getElementById('list').innerHTML = '<div class="empty" style="padding:40px 24px;color:#94a3b8;">Loading your contacts…</div>';
+
+  loadContactsFromDB().then(loaded => {
+    contacts = loaded;
+    render();
+    setTimeout(() => {
+      try {
+        const onboarded = localStorage.getItem('sc_onboarded');
+        if (!onboarded) {
+          document.getElementById('onboard-overlay').classList.add('on');
+          return;
+        }
+        const today = new Date().toDateString();
+        const lastSeen = localStorage.getItem('sc_digest_seen');
+        if (lastSeen !== today) {
+          localStorage.setItem('sc_digest_seen', today);
+          openDigest();
+        }
+      } catch(e) {}
+    }, 800);
+  });
 }
-if (getKey()) boot();
+boot();
 
 // ── ALERTS ───────────────────────────────────────────────────────────────────
+function daysUntilAnnual(dateStr, today) {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (isNaN(d)) return null;
+  let next = new Date(today.getFullYear(), d.getMonth(), d.getDate());
+  if (next < today) next = new Date(today.getFullYear() + 1, d.getMonth(), d.getDate());
+  return Math.round((next - today) / 86400000);
+}
+
 function checkAlerts() {
   const today = new Date(); today.setHours(0,0,0,0);
   const items = [];
@@ -353,20 +657,22 @@ function checkAlerts() {
     if (c.fu) {
       const d = new Date(c.fu); d.setHours(0,0,0,0);
       const diff = Math.round((d - today) / 86400000);
-      if (diff <= 0) items.push(`${c.name} — follow-up overdue`);
-      else if (diff <= 2) items.push(`${c.name} — follow-up in ${diff} day${diff === 1 ? '' : 's'}`);
+      if (diff <= 0) items.push(`📅 ${c.name} — follow-up overdue`);
+      else if (diff <= 2) items.push(`📅 ${c.name} — follow-up in ${diff} day${diff === 1 ? '' : 's'}`);
     }
-    if (c.date) {
-      const d = new Date(c.date);
-      const next = new Date(today.getFullYear(), d.getMonth(), d.getDate());
-      const diff = Math.round((next - today) / 86400000);
-      if (diff >= 0 && diff <= 7) items.push(`${c.name} — birthday/anniversary in ${diff === 0 ? 'today' : diff + ' days'}`);
+    const bdDiff = daysUntilAnnual(c.birthday, today);
+    if (bdDiff !== null && bdDiff <= 7) {
+      items.push(`🎂 ${c.name} — birthday ${bdDiff === 0 ? 'today!' : `in ${bdDiff} day${bdDiff === 1 ? '' : 's'}`}`);
+    }
+    const haDiff = daysUntilAnnual(c.homeanniv || c.date, today);
+    if (haDiff !== null && haDiff <= 7) {
+      items.push(`🏡 ${c.name} — home anniversary ${haDiff === 0 ? 'today!' : `in ${haDiff} day${haDiff === 1 ? '' : 's'}`}`);
     }
   });
 
   const banner = document.getElementById('alert-banner');
   if (items.length) {
-    banner.innerHTML = items.slice(0, 3).map(i => `<div class="alert-row"><span class="alert-dot"></span>${i}</div>`).join('');
+    banner.innerHTML = items.slice(0, 4).map(i => `<div class="alert-row"><span class="alert-dot"></span>${i}</div>`).join('');
     banner.classList.add('on');
   } else {
     banner.classList.remove('on');
@@ -399,70 +705,113 @@ function cardHTML(c) {
   const d = drafts[c.id] || {};
   const mode = d.mode || 'text';
   const activeDraft = d[mode] || '';
-  const hasDraft = d.text || d.email || d.market || d.coach;
+  const hasDraft = d.text || d.email || d.market || d.coach || d.anniv;
+  const badge = urgencyBadge(c);
+  const reason = scoreReason(c);
+  const flag = improvedFlag(c);
+  const moreOpen = d.moreOpen || false;
 
   const doneLabel = c.done
     ? `✓ ${c.doneAt ? new Date(c.doneAt).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : 'Done'}`
-    : 'Mark Done';
+    : 'Done ✓';
 
   return `
-<div class="card ${c.done ? 'done' : c.pri === 'week' ? 'urgent' : 'soon'}" id="card-${c.id}">
-  <div class="card-head">
-    <div>
-      <div class="card-name">${esc(c.name)}</div>
-      <div class="card-meta">${esc(c.type)} · ${esc(c.stage)} · ${c.days}d ago</div>
-      ${c.phone ? `<div class="card-phone">📞 ${esc(c.phone)}</div>` : ''}
+<div class="card ${c.done ? 'done' : c.pri === 'week' ? 'urgent' : 'soon'}" id="card-${c.id}" style="margin-bottom:16px;border-radius:14px;">
+
+  <div class="card-head" style="padding:13px 13px 6px;">
+    <div style="flex:1">
+      <div class="card-name" style="font-size:18px;font-weight:800;">${esc(c.name)}</div>
+      <div class="card-meta" style="margin-top:3px;font-size:12px;">${esc(c.type)} · ${esc(c.stage)}</div>
+      ${c.phone ? `<div class="card-phone" style="margin-top:2px;font-size:12px;">📞 ${esc(c.phone)}</div>` : ''}
     </div>
-    <div>
-      <span class="badge ${c.done ? 'g' : c.pri === 'week' ? 'r' : 'a'}">${c.done ? 'Done' : c.pri === 'week' ? 'Urgent' : 'Soon'}</span>
+    <div style="text-align:right;flex-shrink:0;margin-left:8px;">
+      <div style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:${badge.bg};color:${badge.color};white-space:nowrap;line-height:1.4;">${badge.label}</div>
+      <div style="font-size:22px;font-weight:800;color:${col};margin-top:4px;line-height:1;">${sc}</div>
+      <div style="font-size:9px;color:${col};font-weight:600;">/ 99</div>
     </div>
   </div>
 
-  <div class="score-wrap">
-    <div class="score-bg"><div class="score-fill" style="width:${sc}%;background:${col}"></div></div>
-    <div class="score-num" style="color:${col}">Priority ${sc}</div>
+  <div style="margin:0 13px 4px;">
+    <div style="height:4px;background:#f1f5f9;border-radius:99px;overflow:hidden;">
+      <div style="height:100%;width:${sc}%;background:${col};border-radius:99px;"></div>
+    </div>
+    <div style="font-size:10px;color:#94a3b8;margin-top:3px;">${reason}</div>
   </div>
 
-  <div class="stages">
-    ${STAGES.map(s => `<button class="sp${c.stage === s ? ' on' : ''}" onclick="setStage(${c.id},'${s}')">${s}</button>`).join('')}
+  <div style="margin:8px 13px 10px;padding:9px 12px;border-radius:9px;background:#fffbeb;border-left:3px solid #c8992a;font-size:13px;font-weight:600;color:#92400e;line-height:1.4;">
+    ${esc(flag)}
   </div>
 
-  <div class="flag ${c.done ? 'g' : c.pri === 'week' ? 'r' : ''}">
-    ${c.done ? '✓' : '⚡'} ${esc(c.flag)}
+  <div style="padding:0 13px 12px;">
+    <div style="display:flex;gap:6px;margin-bottom:8px;">
+      ${['Professional','Friendly','Casual'].map(t => `
+        <button onclick="setTone(${c.id},'${t}')" style="flex:1;padding:6px 4px;border-radius:8px;font-size:11px;font-weight:600;border:1.5px solid ${(d.tone||'Friendly')===t?'#0a1628':'#e4e1dc'};background:${(d.tone||'Friendly')===t?'#0a1628':'#fff'};color:${(d.tone||'Friendly')===t?'#fff':'#6b7280'};cursor:pointer;">${t}</button>
+      `).join('')}
+    </div>
+    <button class="ab primary" id="btn-${c.id}" onclick="genDraft(${c.id})" style="width:100%;padding:14px;font-size:15px;border-radius:11px;margin-bottom:8px;background:#0a1628;font-weight:700;">✨ Draft Text Message</button>
+    <div style="display:flex;gap:8px;">
+      ${c.phone ? `<a class="ab call" href="tel:${c.phone.replace(/\D/g,'')}" style="flex:1;justify-content:center;display:flex;align-items:center;padding:10px;text-decoration:none;font-weight:600;">📞 Call</a>` : ''}
+      <button class="ab mark${c.done ? ' on' : ''}" onclick="toggleDone(${c.id})" style="flex:1;padding:10px;font-weight:600;">${doneLabel}</button>
+      <button onclick="toggleMore(${c.id})" style="padding:10px 14px;border-radius:8px;background:#f8f8f8;border:1px solid #e5e2dd;color:#6b7280;font-size:16px;font-weight:600;cursor:pointer;line-height:1;">···</button>
+    </div>
   </div>
 
-  <div class="fu-row">
-    🗓 Follow-up: <input type="date" value="${c.fu || ''}" onchange="setFU(${c.id},this.value)">
-  </div>
-
-  <div class="acts">
-    <button class="ab primary" id="btn-${c.id}" onclick="genDraft(${c.id})">✨ AI Draft</button>
-    ${c.phone ? `<a class="ab call" href="tel:${c.phone.replace(/\D/g,'')}">📞</a>` : ''}
-    <button class="ab mark${c.done ? ' on' : ''}" onclick="toggleDone(${c.id})">${doneLabel}</button>
-    <button class="ab edit" onclick="openModal(${c.id})">✏️</button>
-  </div>
-
-  <div class="acts" style="padding-top:0">
-    <button class="ab market" id="mkt-${c.id}" onclick="genMarket(${c.id})">📊 Market Pulse</button>
-    <button class="ab coach" onclick="toggleCoach(${c.id})">💬 Objection Coach</button>
-  </div>
+  ${moreOpen ? `
+  <div style="padding:10px 13px 12px;border-top:1px solid #f1f0ec;display:flex;gap:5px;flex-wrap:wrap;">
+    <div style="width:100%;font-size:10px;color:#94a3b8;margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;">More Actions</div>
+    <button class="ab edit" onclick="openModal(${c.id})" style="font-size:11px;padding:6px 12px;">✏️ Edit</button>
+    ${(c.birthday || c.homeanniv || c.date) ? `<button class="ab anniv" id="anniv-${c.id}" onclick="sendAnniv(${c.id})" style="font-size:11px;padding:6px 12px;">🎉 Send Greeting</button>` : ''}
+    <button class="ab market" id="mkt-${c.id}" onclick="genMarket(${c.id})" style="font-size:11px;padding:6px 12px;">📊 Market</button>
+    <button class="ab coach" onclick="toggleCoach(${c.id})" style="font-size:11px;padding:6px 12px;">💬 Objection</button>
+    <button onclick="openSocial(${c.id})" style="font-size:11px;padding:6px 12px;border-radius:8px;background:#fdf4ff;border:1px solid #e9d5ff;color:#7c3aed;cursor:pointer;font-weight:600;">📱 Social Post</button>
+    <div style="width:100%;margin-top:6px;display:flex;gap:5px;">
+      <button onclick="snooze(${c.id},14)" style="font-size:11px;padding:5px 10px;border-radius:7px;background:#f8f8f8;border:1px solid #e5e2dd;color:#6b7280;cursor:pointer;">💤 14 Days</button>
+      <button onclick="snooze(${c.id},30)" style="font-size:11px;padding:5px 10px;border-radius:7px;background:#f8f8f8;border:1px solid #e5e2dd;color:#6b7280;cursor:pointer;">💤 30 Days</button>
+      <button onclick="snooze(${c.id},0)" style="font-size:11px;padding:5px 10px;border-radius:7px;background:#fff5f5;border:1px solid #fecaca;color:#d63f3f;cursor:pointer;">🚫 Not Relevant</button>
+    </div>
+    <div style="width:100%;margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <div>
+        <div style="font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:600;">🎂 Birthday</div>
+        <input type="date" value="${c.birthday || ''}" onchange="setBirthday(${c.id},this.value)" style="font-size:12px;padding:6px 8px;border-radius:7px;border:1px solid #e4e1dc;width:100%;font-family:'DM Sans',sans-serif;">
+      </div>
+      <div>
+        <div style="font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:600;">🏡 Home Anniv.</div>
+        <input type="date" value="${c.homeanniv || c.date || ''}" onchange="setHomeAnniv(${c.id},this.value)" style="font-size:12px;padding:6px 8px;border-radius:7px;border:1px solid #e4e1dc;width:100%;font-family:'DM Sans',sans-serif;">
+      </div>
+    </div>
+    <div style="width:100%;margin-top:8px;">
+      <div style="font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:600;">📅 Next follow-up</div>
+      <input type="date" value="${c.fu || ''}" onchange="setFU(${c.id},this.value)" style="font-size:12px;padding:6px 8px;border-radius:7px;border:1px solid #e4e1dc;width:100%;font-family:'DM Sans',sans-serif;">
+    </div>
+    <div style="width:100%;margin-top:8px;display:flex;gap:4px;flex-wrap:wrap;">
+      ${STAGES.map(s => `<button class="sp${c.stage === s ? ' on' : ''}" onclick="setStage(${c.id},'${s}')">${s}</button>`).join('')}
+    </div>
+  </div>` : ''}
 
   <div class="obj-row${d.objOpen ? ' on' : ''}" id="obj-${c.id}">
-    <input class="obj-in" id="oi-${c.id}" placeholder="What did the client say?">
-    <button class="obj-go" id="og-${c.id}" onclick="submitCoach(${c.id})">Coach</button>
+    <input class="obj-in" id="oi-${c.id}" placeholder="Type what the client said…">
+    <button class="obj-go" id="og-${c.id}" onclick="submitCoach(${c.id})">Coach Me</button>
   </div>
 
   ${hasDraft ? `
-  <div class="draft-tabs">
-    ${d.text ? `<button class="dt${mode === 'text' ? ' on' : ''}" onclick="setMode(${c.id},'text')">Text</button>` : ''}
-    ${d.email ? `<button class="dt${mode === 'email' ? ' on' : ''}" onclick="setMode(${c.id},'email')">Email</button>` : ''}
-    ${d.market ? `<button class="dt${mode === 'market' ? ' on' : ''}" onclick="setMode(${c.id},'market')">Market</button>` : ''}
-    ${d.coach ? `<button class="dt${mode === 'coach' ? ' on' : ''}" onclick="setMode(${c.id},'coach')">Coach</button>` : ''}
+  <div style="padding:0 13px 4px;display:flex;gap:5px;flex-wrap:wrap;">
+    ${d.text ? `<button class="dt${mode === 'text' ? ' on' : ''}" onclick="setMode(${c.id},'text')">💬 Text</button>` : ''}
+    ${d.email ? `<button class="dt${mode === 'email' ? ' on' : ''}" onclick="setMode(${c.id},'email')">✉️ Email</button>` : ''}
+    ${d.market ? `<button class="dt${mode === 'market' ? ' on' : ''}" onclick="setMode(${c.id},'market')">📊 Market</button>` : ''}
+    ${d.anniv ? `<button class="dt${mode === 'anniv' ? ' on' : ''}" onclick="setMode(${c.id},'anniv')">🎉 Greeting</button>` : ''}
+    ${d.social ? `<button class="dt${mode === 'social' ? ' on' : ''}" onclick="setMode(${c.id},'social')">📱 Social</button>` : ''}
+    ${d.coach ? `<button class="dt${mode === 'coach' ? ' on' : ''}" onclick="setMode(${c.id},'coach')">💬 Coach</button>` : ''}
   </div>` : ''}
 
-  <div class="draft-out${activeDraft ? ' on' : ''}" id="dout-${c.id}">
+  <div class="draft-out${activeDraft ? ' on' : ''}" id="dout-${c.id}" style="margin:0 13px 13px;">
     ${esc(activeDraft)}
-    ${activeDraft ? `<br><button class="copy-btn" onclick="copyDraft(${c.id})">Copy</button>` : ''}
+    ${activeDraft ? `
+    <br>
+    <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+      <button class="copy-btn" onclick="copyDraft(${c.id})">Copy</button>
+      ${c.email ? `<button class="copy-btn" style="color:#0369a1;background:none;border:none;cursor:pointer;text-decoration:underline;font-size:11px;font-weight:600;padding:0;" onclick="sendEmail(${c.id})">Send via Email ↗</button>` : ''}
+      ${c.phone ? `<button class="copy-btn" style="color:#2a8c5a;background:none;border:none;cursor:pointer;text-decoration:underline;font-size:11px;font-weight:600;padding:0;" onclick="sendText(${c.id})">Send via Text ↗</button>` : ''}
+    </div>` : ''}
   </div>
 </div>`;
 }
@@ -487,12 +836,42 @@ function setFU(id, val) {
   if (c) { c.fu = val; persist(); checkAlerts(); }
 }
 
+function snooze(id, days) {
+  const c = contacts.find(x => x.id === id);
+  if (!c) return;
+  if (days === 0) {
+    const d = new Date(); d.setDate(d.getDate() + 30);
+    c.snoozed = d.toISOString();
+  } else {
+    const d = new Date(); d.setDate(d.getDate() + days);
+    c.snoozed = d.toISOString();
+  }
+  if (drafts[id]) drafts[id].moreOpen = false;
+  persist(); persistToDB(c); render();
+}
+
+function toggleMore(id) {
+  if (!drafts[id]) drafts[id] = {};
+  drafts[id].moreOpen = !drafts[id].moreOpen;
+  render();
+}
+
 function toggleDone(id) {
   const c = contacts.find(x => x.id === id);
   if (!c) return;
   c.done = !c.done;
   c.doneAt = c.done ? Date.now() : null;
-  persist(); render();
+  persist(); persistToDB(c); render();
+}
+
+function setStage(id, stage) {
+  const c = contacts.find(x => x.id === id);
+  if (c) { c.stage = stage; persist(); persistToDB(c); render(); }
+}
+
+function setFU(id, val) {
+  const c = contacts.find(x => x.id === id);
+  if (c) { c.fu = val; persist(); persistToDB(c); checkAlerts(); }
 }
 
 function setMode(id, mode) {
@@ -510,11 +889,125 @@ function toggleCoach(id) {
 
 // ── API ──────────────────────────────────────────────────────────────────────
 async function api(prompt, max) {
+  const key = getKey();
+  if (!key) {
+    const TEXT_DRAFTS = [
+      n => `Hey ${n}, just wanted to check in and see how things are going on your end. I know the process can feel like a lot sometimes — happy to jump on a quick call if anything's come up. Let me know!`,
+      n => `Hi ${n}! Been thinking about you and wanted to reach out. Where are things landing for you right now? I'm here if you need anything at all.`,
+      n => `${n}, just a quick check-in — I want to make sure you're feeling good about everything. Any questions I can answer for you this week?`,
+      n => `Hey ${n} — the market has been moving fast lately and I wanted to make sure you're in the loop. Worth a quick chat this week if you have 10 minutes?`,
+      n => `Hi ${n}! I was just reviewing your file and wanted to follow up. Things are progressing well — I'd love to connect briefly to make sure we're aligned on next steps.`,
+      n => `${n}, hope your week is going well! I have a couple of updates I think you'll want to hear. When's a good time to connect?`,
+      n => `Hey ${n} — just thinking about you and wanted to send a quick note. No pressure at all, just want you to know I'm here and on top of things for you.`,
+      n => `Hi ${n}! Quick question — have you had a chance to think more about what we discussed? I want to make sure I'm supporting you in the right way.`,
+      n => `${n}, I saw something come across my desk that made me think of your situation. Mind if I share a quick update? I think it's relevant to where you are right now.`,
+      n => `Hey ${n} — just checking in. I always want my clients to feel like they can reach out anytime, and I want to make sure I'm doing the same. How are you feeling about everything?`
+    ];
+
+    const EMAIL_DRAFTS = [
+      n => `Subject: Checking in on your end\n\nHi ${n},\n\nI wanted to take a moment to reach out and see how things are going. I know the process can feel like a lot to navigate, and I want to make sure you feel supported every step of the way.\n\nIf you have any questions or just want to talk through where things stand, I'm always available. Let me know what works best for you this week.\n\nLooking forward to hearing from you!`,
+      n => `Subject: A quick update for you\n\nHi ${n},\n\nI've been keeping a close eye on things and wanted to share a quick update. The market has been active lately, and I think there are a few things worth discussing given where you are in the process.\n\nWould you be open to a brief call this week? Even 15 minutes would be helpful. Just let me know what works.\n\nTalk soon!`,
+      n => `Subject: Thinking of you\n\nHi ${n},\n\nI was reviewing my notes this morning and realized I hadn't been in touch recently — and I didn't want too much time to go by without checking in.\n\nIs there anything on your mind right now that I can help with? Even if it's just a quick question, I'm here. Let me know the best way to connect.\n\nWarm regards,`,
+      n => `Subject: Where things stand\n\nHi ${n},\n\nI wanted to give you a brief status update and make sure we're aligned on next steps. Things are moving in the right direction, and I want to make sure you feel confident and informed throughout.\n\nIf you have a few minutes this week, I'd love to connect. Even a short call goes a long way. What does your schedule look like?\n\nLooking forward to it!`,
+      n => `Subject: Something I wanted to share with you\n\nHi ${n},\n\nI came across something recently that I think is relevant to your situation, and I wanted to make sure I passed it along directly rather than waiting for our next conversation.\n\nWould it be okay if I gave you a quick call this week to walk you through it? I think it'll be worth your time. Just reply with a good time and I'll make it work.\n\nTalk soon!`,
+      n => `Subject: Just wanted to reach out\n\nHi ${n},\n\nHope you're having a great week! I just wanted to send a quick note to let you know I'm thinking about you and your goals, and I'm here whenever you need me.\n\nNo action needed on your end — just wanted to stay connected and make sure you know I'm actively working on your behalf. Feel free to reach out anytime.\n\nAll the best!`,
+      n => `Subject: A few things worth discussing\n\nHi ${n},\n\nI've been doing some thinking about your situation and have a couple of ideas I'd love to run by you. Nothing urgent, but I think you'll find them useful.\n\nWould you be open to a quick conversation this week? I'll keep it short and to the point. Just let me know when works for you.\n\nLooking forward to connecting!`,
+      n => `Subject: Checking in — how are you feeling about everything?\n\nHi ${n},\n\nI always like to check in at this stage of the process to make sure my clients feel good about where things are heading. I'd rather you reach out with small questions than feel uncertain about anything.\n\nIs there anything on your mind? I'm happy to talk through it — no question is too small. Just reply here or give me a call whenever works.\n\nHere for you!`,
+      n => `Subject: Market update you should know about\n\nHi ${n},\n\nI wanted to reach out with a quick market update that I think is directly relevant to your situation. Things have been shifting, and I want to make sure you have the most current picture before we make any decisions.\n\nCan we find 15-20 minutes this week to connect? I'll keep it focused and practical. Let me know what works on your end.\n\nTalk soon!`,
+      n => `Subject: Following up — and I have good news\n\nHi ${n},\n\nI've been working behind the scenes on a few things and wanted to loop you in on where things stand. I think you'll be pleased with the progress.\n\nWould love to catch up briefly this week if you're available. Even a quick call would be great. What does your schedule look like?\n\nLooking forward to it!`
+    ];
+
+    const COACH_SETS = [
+      `1. "I completely understand that hesitation — this is a big decision and it's smart to take your time. What would help you feel more confident about moving forward?"\n\n2. "That's actually one of the most common things I hear, and it's a sign you're thinking about this carefully. Let's look at it together — what specifically is giving you pause?"\n\n3. "I hear you, and I don't want to push you into anything. Can I just share one piece of information that might be helpful before you decide?"`,
+
+      `1. "That's a fair point, and I want to make sure we address it directly. A lot of my clients have felt the same way — here's what usually helps them get clarity."\n\n2. "I appreciate you being honest with me about that. The good news is we have options — let me walk you through a couple of scenarios that might change how this looks."\n\n3. "You're asking exactly the right question. Let's slow down and make sure we've covered every angle before making any moves."`,
+
+      `1. "I really respect that you're thinking this through carefully. That actually puts you in a stronger position than most people at this stage."\n\n2. "That concern makes a lot of sense given what you've seen out there. Here's a different way to look at it that might be reassuring."\n\n3. "Let's not rush past this — it's worth spending a few minutes on. What would the ideal outcome look like for you?"`,
+
+      `1. "I've heard that before, and it's always worth exploring. Can I ask — what's driving that feeling right now?"\n\n2. "That's actually more common than you'd think in this market. The key is making sure you have the right information before any decision is made."\n\n3. "I'm glad you brought that up rather than just sitting with it. Let's talk it through — I think there's a path forward that works for you."`,
+
+      `1. "That's a really valid concern, and I want to take it seriously. What would need to be true for you to feel comfortable moving forward?"\n\n2. "I hear you — and honestly, your instinct to pause is worth listening to. Let's make sure we've done our homework before the next step."\n\n3. "Thank you for being open with me. The more honest you are about your concerns, the better I can help you get to the right outcome."`
+    ];
+
+    const name = prompt.match(/Contact name: ([^\n]+)/)?.[1]?.trim() || 'there';
+    const tone = prompt.match(/Relationship tone: ([^\n]+)/)?.[1]?.trim() || 'Friendly';
+    const trigger = prompt.match(/Priority trigger: ([^\n]+)/)?.[1]?.trim() || '';
+    const isEmail = prompt.includes('Channel: Email');
+    const isCoach = prompt.includes('real estate coach');
+    const isMarket = prompt.includes('market update');
+    const isAnniv = prompt.includes('anniversary') || prompt.includes('birthday');
+    const isSocial = prompt.includes('social media copywriter');
+    const coachIdx = Math.floor(Math.random() * 5);
+
+    if (isCoach) return COACH_SETS[coachIdx];
+    if (isMarket) return `Rates have been holding in an interesting range lately — worth paying attention to if you have been on the fence about timing. Inventory is still tight in most areas, which means well-priced homes are moving fast. Given where you are in the process, it might be worth a quick conversation to make sure you are positioned well. What does your week look like?`;
+    if (isAnniv) return `I was just thinking about you and wanted to reach out. Wishing you a wonderful celebration today — you deserve it. Hope this year brings you everything you are looking for.`;
+
+    if (isSocial) {
+      const postType = prompt.includes('Just Closed') || prompt.includes('just closed') ? 'closed'
+        : prompt.includes('Just Listed') || prompt.includes('just listed') ? 'listed'
+        : prompt.includes('Home Anniversary') || prompt.includes('home anniversary') ? 'anniversary'
+        : prompt.includes('Market Update') || prompt.includes('market update') ? 'market'
+        : prompt.includes('Client Spotlight') || prompt.includes('testimonial') ? 'testimonial'
+        : 'tip';
+      const platform = prompt.includes('Instagram') ? 'Instagram' : prompt.includes('LinkedIn') ? 'LinkedIn' : 'Facebook';
+      const socialFallbacks = {
+        closed: `Congratulations to our clients on their new home! It was an honor helping them find the perfect place. Every closing reminds me why I love what I do.\n\nIf you or someone you know is thinking about buying or selling, I am always here to help.${platform === 'Instagram' ? '\n\n#RealEstate #JustClosed #NewHome #ConnecticutRealEstate #HomeBuying #Realtor #CTRealEstate' : ''}`,
+        listed: `Just listed! A beautiful home is now available and ready for its next chapter. Reach out if you would like to schedule a showing or learn more.\n\nLink in bio for details.${platform === 'Instagram' ? '\n\n#JustListed #RealEstate #ConnecticutHomes #ForSale #DreamHome #CTRealEstate #Realtor' : ''}`,
+        anniversary: `Happy home anniversary! A year ago today, the keys changed hands and a house became a home. These milestones are exactly why I love what I do. Congratulations!${platform === 'Instagram' ? '\n\n#HomeAnniversary #RealEstate #ClientLove #Connecticut #Realtor' : ''}`,
+        market: `The Connecticut market is moving. Whether you are thinking about buying or selling, now is a great time to have a conversation. I am always happy to share what I am seeing on the ground.\n\nReach out anytime.${platform === 'Instagram' ? '\n\n#RealEstate #MarketUpdate #Connecticut #HomeBuying #HomeSelling #Realtor' : ''}`,
+        testimonial: `There is nothing better than helping someone find their perfect home. Grateful for amazing clients who trust me with one of the biggest decisions of their lives.\n\nThank you for letting me be part of your journey.${platform === 'Instagram' ? '\n\n#ClientLove #RealEstate #Connecticut #Grateful #Realtor #Testimonial' : ''}`,
+        tip: `Thinking about buying a home? One of the best things you can do is get pre-approved before you start looking. It shows sellers you are serious and helps you move fast in a competitive market.\n\nQuestions? I am always here to help.${platform === 'Instagram' ? '\n\n#RealEstateTip #HomeBuying #Connecticut #Realtor #FirstTimeHomeBuyer' : ''}`
+      };
+      return socialFallbacks[postType] || socialFallbacks.closed;
+    }
+
+    // Trigger-aware fallback messages
+    const t = trigger.toLowerCase();
+    const firstName = name.split(' ')[0];
+
+    if (isEmail) {
+      if (tone === 'Professional') {
+        if (t.includes('pre-approval')) return `Subject: Your Pre-Approval — Time Sensitive\n\nHi ${name},\n\nI wanted to reach out because your pre-approval is coming up soon and I want to make sure we are in the best position before it expires. I have a few options I would like to review with you to keep your search on track.\n\nDo you have time for a quick call this week?`;
+        if (t.includes('recent close')) return `Subject: Checking In\n\nHi ${name},\n\nI wanted to reach out now that you have had some time to settle in. I hope everything is going smoothly with the new place.\n\nIf you ever have questions or know anyone looking to buy or sell, I am always happy to help.`;
+        return `Subject: Following Up\n\nHi ${name},\n\nI wanted to check in and make sure you are feeling supported through this process. Things can move quickly and I want to make sure we are aligned on next steps.\n\nDo you have a few minutes to connect this week?`;
+      }
+      if (tone === 'Casual') {
+        if (t.includes('pre-approval')) return `Subject: Quick heads up on your pre-approval\n\nHey ${firstName},\n\nJust a heads up — your pre-approval is coming up soon. Want to take a look at your options before it expires? I can make it really quick.\n\nFree for a call this week?`;
+        if (t.includes('recent close')) return `Subject: Hope you are loving the new place!\n\nHey ${firstName},\n\nJust wanted to check in and see how things are going at the new place. Hope the move went smoothly!\n\nLet me know if you need anything at all.`;
+        return `Subject: Hey, just checking in\n\nHey ${firstName},\n\nJust wanted to pop in and see how things are going on your end. No pressure at all — just want to make sure you know I am here if you need anything.\n\nHow are you feeling about everything?`;
+      }
+      // Friendly (default)
+      if (t.includes('pre-approval')) return `Subject: Your Pre-Approval — Let's Make Sure You Are Set\n\nHi ${firstName},\n\nJust a friendly heads up that your pre-approval is expiring soon. I would love to help you review your options and make sure everything stays on track.\n\nWould you be open to a quick call this week?`;
+      if (t.includes('recent close')) return `Subject: Checking in on you!\n\nHi ${firstName},\n\nI just wanted to reach out and see how you are settling in. I hope the new place is feeling like home!\n\nIf you ever have questions or know someone looking to buy or sell, do not hesitate to reach out.`;
+      return `Subject: Just thinking of you\n\nHi ${firstName},\n\nI wanted to check in and see how things are going. I always like to stay in touch and make sure my clients feel supported.\n\nIs there anything I can help with right now?`;
+    }
+
+    // Text message fallbacks
+    if (tone === 'Professional') {
+      if (t.includes('pre-approval')) return `Hi ${name}, I wanted to reach out because your pre-approval is coming up soon. I would like to make sure we review your options before it expires and keep your search on track. Do you have time for a quick call this week?`;
+      if (t.includes('recent close')) return `Hi ${name}, I hope you are settling in well. I wanted to check in and see if you have any questions now that you are in the new place. Feel free to reach out anytime.`;
+      if (t.includes('past client')) return `Hi ${name}, I hope things are going well. I wanted to stay in touch and let you know I am always available if you have real estate questions or know someone who does.`;
+      return `Hi ${name}, I wanted to check in and make sure you are feeling good about where things stand. Happy to connect this week if it would be helpful.`;
+    }
+    if (tone === 'Casual') {
+      if (t.includes('pre-approval')) return `Hey ${firstName} — just a quick heads up, your pre-approval is expiring soon. Want to take a look at your options before it runs out? Happy to make it quick!`;
+      if (t.includes('recent close')) return `Hey ${firstName}! Hope you are loving the new place. Just wanted to check in and see how the move went. Let me know if you need anything!`;
+      if (t.includes('past client')) return `Hey ${firstName}! Just thinking about you and wanted to say hi. Hope everything is great. Let me know if you ever need anything real estate related!`;
+      return `Hey ${firstName} — just checking in to see how things are going. No pressure, just want to make sure you know I am here if you need anything!`;
+    }
+    // Friendly default
+    if (t.includes('pre-approval')) return `Hi ${firstName}, just a friendly heads up that your pre-approval is coming up soon. I would love to help you review your options and make sure we stay on track. Would a quick call this week work for you?`;
+    if (t.includes('recent close')) return `Hi ${firstName}! I just wanted to check in and see how you are settling into the new place. I hope everything is going smoothly. Do not hesitate to reach out if you need anything at all!`;
+    if (t.includes('past client')) return `Hi ${firstName}, I was just thinking about you and wanted to reach out. I hope everything is going well! If you ever have questions or know anyone looking to buy or sell, I am always here to help.`;
+    if (t.includes('no showings') || t.includes('stalling')) return `Hi ${firstName}, I wanted to check in on the listing and see how you are feeling about things. I have a few ideas I would love to run by you. Would this week work for a quick chat?`;
+    return `Hi ${firstName}, just wanted to check in and see how things are going on your end. I am here if you have any questions or just want to talk through next steps. What does your week look like?`;
+  }
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-api-key': getKey(),
+      'x-api-key': key,
       'anthropic-version': '2023-06-01',
       'anthropic-dangerous-direct-browser-access': 'true'
     },
@@ -532,41 +1025,112 @@ async function api(prompt, max) {
   return data.content[0].text;
 }
 
+function setTone(id, tone) {
+  if (!drafts[id]) drafts[id] = {};
+  drafts[id].tone = tone;
+  // Clear existing drafts so new tone generates fresh
+  drafts[id].text = null;
+  drafts[id].email = null;
+  render();
+}
+
+function detectTrigger(flag, type, stage, days) {
+  const f = (flag || '').toLowerCase();
+  const t = type || '';
+
+  if (f.includes('pre-approval') || f.includes('rate lock') || f.includes('expir')) return 'Pre-approval or rate lock expiring — create urgency, offer to review options before they run out.';
+  if (f.includes('recent close') || f.includes('check in')) {
+    if (t === 'Past Client' || t === 'Sphere') return 'Recent close — warm relationship check-in, low pressure, plant a referral seed naturally.';
+    return 'Recent close — check in and offer support.';
+  }
+  if (f.includes('no showing') || f.includes('no show')) return 'No showings on listing — check in on feedback and discuss strategy for next steps.';
+  if (f.includes('price reduction') || f.includes('overdue')) return 'Price reduction discussion overdue — be supportive and offer a clear next step.';
+  if (f.includes('offer')) return 'Offer activity — follow up immediately, be helpful and action-oriented.';
+  if (f.includes('new inquiry') || f.includes('respond within') || f.includes('requested info')) return 'New lead inquiry — respond quickly, be warm and helpful, make it easy to reply.';
+  if (f.includes('referral') || f.includes('anniversar') || f.includes('birthday')) return 'Anniversary or relationship opportunity — be warm and personal, strengthen the bond, no sales pressure.';
+  if (f.includes('under contract') || stage === 'Under Contract') return 'Under contract — offer reassurance and support, answer any questions they might have.';
+
+  if (t === 'Sphere') return `Sphere contact with no reach-out in ${days} days — keep it casual and friendly, no real estate agenda, just reconnect as a person.`;
+  if (t === 'Past Client') return `Past client with no contact in ${days} days — warm relationship check-in, stay top of mind, mention you are thinking of them.`;
+  if (t === 'Lead') return days <= 2 ? 'New lead — respond immediately, be helpful and inviting.' : `Lead with no follow-up in ${days} days — re-engage warmly, offer a simple next step.`;
+  if (t === 'Active Seller') return `Active seller with no contact in ${days} days — check in on listing activity and keep them informed.`;
+  return `Active buyer with no contact in ${days} days — check in and offer helpful next steps.`;
+}
+
 // ── AI FEATURES ──────────────────────────────────────────────────────────────
 async function genDraft(id) {
   const c = contacts.find(x => x.id === id);
   if (!c) return;
   if (!drafts[id]) drafts[id] = {};
+  const tone = drafts[id].tone || 'Friendly';
+  const trigger = detectTrigger(c.flag, c.type, c.stage, c.days);
   const btn = document.getElementById('btn-' + id);
-  if (btn) { btn.disabled = true; btn.textContent = 'Generating…'; }
+  if (btn) { btn.disabled = true; btn.textContent = 'Drafting…'; }
+
+  const systemPrompt = `You are an expert real estate communication assistant. Your job is to write short, natural, effective messages for real estate agents to send to their contacts.
+
+CRITICAL RULES:
+1. The message MUST be 100% tied to the reason this contact is prioritized.
+2. Reference the specific trigger or situation in the message.
+3. Keep it short, conversational, and human — 2 to 3 sentences maximum.
+4. Make it easy for the client to respond.
+5. Do NOT sound robotic, generic, or salesy.
+6. Do NOT include emojis.
+7. End with a simple question or suggestion to start a conversation.
+8. Sound like the agent wrote it — not like a robot.
+9. Never use "just checking in" as an opener.
+
+TONE BY CONTACT TYPE:
+- Active Buyer: Direct, helpful, action-oriented. Reference their specific situation.
+- Active Seller: Informative, supportive, focused on listing activity.
+- Lead: Quick, warm, low-pressure. Make it easy for them to respond.
+- Past Client: Relationship-focused, warm, no sales pressure. Sound like a friend.
+- Sphere: Casual, friendly, zero real estate agenda. Pure reconnection.`;
 
   try {
     const [text, email] = await Promise.all([
-      api(`Write a warm natural follow-up TEXT MESSAGE (2-3 sentences) for a real estate client.
-Name: ${c.name} | Type: ${c.type} | Stage: ${c.stage} | Days since contact: ${c.days} | Situation: ${c.flag}
-Be human not salesy. Reference their situation naturally. End with a soft call to action. Plain text only.`, 200),
-      api(`Write a professional follow-up EMAIL for a real estate client.
+      api(`${systemPrompt}
+
+Contact name: ${c.name}
+Role: ${c.type}
+Stage: ${c.stage}
+Days since last contact: ${c.days}
+Priority trigger: ${trigger}
+Relationship tone: ${tone}
+Channel: Text message
+
+Write one text message only. Plain text, no subject line, no labels, no quotes. Ready to send.`, 200),
+
+      api(`${systemPrompt}
+
+Contact name: ${c.name}
+Role: ${c.type}
+Stage: ${c.stage}
+Days since last contact: ${c.days}
+Priority trigger: ${trigger}
+Relationship tone: ${tone}
+Channel: Email
+
 Format exactly as:
-Subject: [subject line here]
+Subject: [subject line]
 
-[email body - 3 to 4 sentences]
+[email body — 2 to 3 sentences]
 
-Name: ${c.name} | Type: ${c.type} | Stage: ${c.stage} | Days since contact: ${c.days} | Situation: ${c.flag}
-Warm but professional tone. Reference their situation. Clear call to action. Plain text only.`, 400)
+Plain text only. No extra labels. Ready to send.`, 350)
     ]);
+
     drafts[id].text = text;
     drafts[id].email = email;
     drafts[id].mode = 'text';
     render();
   } catch (e) {
-    if (!drafts[id]) drafts[id] = {};
     drafts[id].text = 'Error: ' + e.message;
     drafts[id].mode = 'text';
     render();
   }
 
   const btn2 = document.getElementById('btn-' + id);
-  if (btn2) { btn2.disabled = false; btn2.textContent = '✨ AI Draft'; }
+  if (btn2) { btn2.disabled = false; btn2.textContent = '✨ Draft Text Message'; }
 }
 
 async function genMarket(id) {
@@ -623,6 +1187,33 @@ Keep each response under 3 sentences. Be warm and conversational.`, 500);
   }
 }
 
+function sendEmail(id) {
+  const c = contacts.find(x => x.id === id);
+  const d = drafts[id] || {};
+  const mode = d.mode || 'text';
+  const body = d[mode] || '';
+  if (!c?.email) return;
+  let subject = 'Checking in';
+  if (mode === 'email') {
+    const firstLine = body.split('\n')[0];
+    if (firstLine.toLowerCase().startsWith('subject:')) {
+      subject = firstLine.replace(/^subject:\s*/i, '').trim();
+    }
+  }
+  const mailBody = mode === 'email' ? body.replace(/^subject:.*\n\n?/i, '') : body;
+  window.location.href = `mailto:${c.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailBody)}`;
+}
+
+function sendText(id) {
+  const c = contacts.find(x => x.id === id);
+  const d = drafts[id] || {};
+  const mode = d.mode || 'text';
+  const body = d[mode] || '';
+  if (!c?.phone) return;
+  const phone = c.phone.replace(/\D/g, '');
+  window.location.href = `sms:${phone}&body=${encodeURIComponent(body)}`;
+}
+
 function copyDraft(id) {
   const d = drafts[id] || {};
   const mode = d.mode || 'text';
@@ -630,6 +1221,136 @@ function copyDraft(id) {
   navigator.clipboard.writeText(text).catch(() => {});
   const btn = event?.target;
   if (btn) { btn.textContent = 'Copied!'; setTimeout(() => { if (btn) btn.textContent = 'Copy'; }, 1500); }
+}
+
+function setBirthday(id, val) {
+  const c = contacts.find(x => x.id === id);
+  if (c) { c.birthday = val; persist(); persistToDB(c); checkAlerts(); }
+}
+
+function setHomeAnniv(id, val) {
+  const c = contacts.find(x => x.id === id);
+  if (c) { c.homeanniv = val; c.date = val; persist(); persistToDB(c); checkAlerts(); }
+}
+
+// ── ANNIVERSARY ───────────────────────────────────────────────────────────────
+async function sendAnniv(id) {
+  const c = contacts.find(x => x.id === id);
+  if (!c) return;
+  if (!drafts[id]) drafts[id] = {};
+  const btn = document.getElementById('anniv-' + id);
+  if (btn) { btn.disabled = true; btn.textContent = 'Drafting…'; }
+
+  // Determine which event is closest
+  const today = new Date(); today.setHours(0,0,0,0);
+  const bdDiff = daysUntilAnnual(c.birthday, today);
+  const haDiff = daysUntilAnnual(c.homeanniv || c.date, today);
+  let eventType = 'anniversary';
+  if (bdDiff !== null && (haDiff === null || bdDiff <= haDiff)) eventType = 'birthday';
+  else if (haDiff !== null) eventType = 'home anniversary';
+
+  try {
+    const text = await api(`Write a warm, brief ${eventType} message for a real estate client.
+Name: ${c.name} | Type: ${c.type} | Event: ${eventType}
+Keep it genuine, personal, and under 3 sentences. Do NOT make it salesy. Just celebrate them.
+Plain text only. No subject line. No emojis.`, 150);
+    drafts[id].anniv = text;
+    drafts[id].mode = 'anniv';
+    render();
+  } catch(e) {
+    const fallbacks = {
+      birthday: `Hi ${c.name.split(' ')[0]}, I was just thinking about you and wanted to wish you a happy birthday. Hope you have a wonderful day celebrating!`,
+      'home anniversary': `Hi ${c.name.split(' ')[0]}, I just realized it's been a year since you moved in — happy home anniversary! Hope you're loving every minute of it.`,
+      anniversary: `Hi ${c.name.split(' ')[0]}, just wanted to reach out and wish you a wonderful anniversary. Hope you're doing great!`
+    };
+    drafts[id].anniv = fallbacks[eventType] || fallbacks.anniversary;
+    drafts[id].mode = 'anniv';
+    render();
+  }
+
+  const btn2 = document.getElementById('anniv-' + id);
+  if (btn2) { btn2.disabled = false; btn2.textContent = '🎉 Send Greeting'; }
+}
+
+// ── DAILY DIGEST ─────────────────────────────────────────────────────────────
+function openDigest() {
+  document.getElementById('digest-overlay').classList.add('on');
+  buildDigest();
+}
+function closeDigest() { document.getElementById('digest-overlay').classList.remove('on'); }
+function bgCloseDigest(e) { if (e.target === document.getElementById('digest-overlay')) closeDigest(); }
+function copyDigest() {
+  const text = document.getElementById('digest-content').innerText;
+  navigator.clipboard.writeText(text).catch(() => {});
+  const btn = event?.target;
+  if (btn) { btn.textContent = 'Copied!'; setTimeout(() => { btn.textContent = 'Copy Digest'; }, 1800); }
+}
+
+function buildDigest() {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const urgent = contacts.filter(c => c.pri === 'week' && !c.done);
+  const soon = contacts.filter(c => c.pri === 'soon' && !c.done);
+
+  const birthdays = contacts.filter(c => {
+    const diff = daysUntilAnnual(c.birthday, today);
+    return diff !== null && diff <= 7;
+  });
+
+  const homeAnnivs = contacts.filter(c => {
+    const diff = daysUntilAnnual(c.homeanniv || c.date, today);
+    return diff !== null && diff <= 7;
+  });
+
+  const overdue = contacts.filter(c => {
+    if (!c.fu || c.done) return false;
+    const d = new Date(c.fu); d.setHours(0,0,0,0);
+    return d <= today;
+  });
+
+  const lines = [];
+  lines.push(`📋 SMARTCONTACT DAILY BRIEFING`);
+  lines.push(`${today.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}`);
+  lines.push('');
+
+  if (birthdays.length) {
+    lines.push(`🎂 BIRTHDAYS THIS WEEK`);
+    birthdays.forEach(c => {
+      const diff = daysUntilAnnual(c.birthday, today);
+      lines.push(`  • ${c.name} — ${diff === 0 ? 'TODAY!' : `in ${diff} day${diff===1?'':'s'}`}`);
+    });
+    lines.push('');
+  }
+
+  if (homeAnnivs.length) {
+    lines.push(`🏡 HOME ANNIVERSARIES THIS WEEK`);
+    homeAnnivs.forEach(c => {
+      const diff = daysUntilAnnual(c.homeanniv || c.date, today);
+      lines.push(`  • ${c.name} — ${diff === 0 ? 'TODAY!' : `in ${diff} day${diff===1?'':'s'}`}`);
+    });
+    lines.push('');
+  }
+
+  if (overdue.length) {
+    lines.push(`⚠️ OVERDUE FOLLOW-UPS`);
+    overdue.forEach(c => lines.push(`  • ${c.name} — was due ${new Date(c.fu).toLocaleDateString('en-US',{month:'short',day:'numeric'})}`));
+    lines.push('');
+  }
+
+  lines.push(`🔴 AT RISK (${urgent.length})`);
+  if (urgent.length) urgent.forEach(c => lines.push(`  • ${c.name} — ${c.flag}`));
+  else lines.push('  None — you\'re caught up!');
+  lines.push('');
+
+  lines.push(`🟡 FOLLOW UP SOON (${soon.length})`);
+  if (soon.length) soon.slice(0,5).forEach(c => lines.push(`  • ${c.name} — ${c.flag}`));
+  else lines.push('  None');
+  lines.push('');
+
+  lines.push(`✅ COMPLETED TODAY: ${contacts.filter(c => c.done && c.doneAt && (Date.now()-c.doneAt)<86400000).length}`);
+  lines.push('');
+  lines.push('— SmartContact · Willow Properties · Judy');
+
+  document.getElementById('digest-content').textContent = lines.join('\n');
 }
 
 // ── MODAL ────────────────────────────────────────────────────────────────────
@@ -642,10 +1363,11 @@ function openModal(id) {
   document.getElementById('m-email').value = c?.email || '';
   document.getElementById('m-type').value = c?.type || 'Active Buyer';
   document.getElementById('m-stage').value = c?.stage || 'First Contact';
-  document.getElementById('m-days').value = c?.days ?? '';
+  document.getElementById('m-lastcontact').value = c?.lastcontact || '';
   document.getElementById('m-pri').value = c?.pri || 'week';
   document.getElementById('m-flag').value = c?.flag || '';
-  document.getElementById('m-date').value = c?.date || '';
+  document.getElementById('m-birthday').value = c?.birthday || '';
+  document.getElementById('m-homeanniv').value = c?.homeanniv || c?.date || '';
   document.getElementById('m-del').style.display = c ? 'block' : 'none';
   document.getElementById('overlay').classList.add('on');
   setTimeout(() => document.getElementById('m-name').focus(), 80);
@@ -663,22 +1385,33 @@ function bgClose(e) {
 function saveModal() {
   const name = document.getElementById('m-name').value.trim();
   if (!name) { document.getElementById('m-name').focus(); return; }
+  const lastcontact = document.getElementById('m-lastcontact').value;
+  let days = 0;
+  if (lastcontact) {
+    const diff = new Date() - new Date(lastcontact);
+    days = Math.max(0, Math.floor(diff / 86400000));
+  }
   const data = {
     name,
     phone: document.getElementById('m-phone').value.trim(),
     email: document.getElementById('m-email').value.trim(),
     type: document.getElementById('m-type').value,
     stage: document.getElementById('m-stage').value,
-    days: parseInt(document.getElementById('m-days').value) || 0,
+    lastcontact,
+    days,
     pri: document.getElementById('m-pri').value,
     flag: document.getElementById('m-flag').value.trim() || 'Follow up needed',
-    date: document.getElementById('m-date').value,
+    birthday: document.getElementById('m-birthday').value,
+    homeanniv: document.getElementById('m-homeanniv').value,
+    date: document.getElementById('m-homeanniv').value, // backward compat
   };
   if (editId) {
     const c = contacts.find(x => x.id === editId);
-    if (c) Object.assign(c, data);
+    if (c) { Object.assign(c, data); persistToDB(c); }
   } else {
-    contacts.unshift({ id: nid++, ...data, fu: '', done: false, doneAt: null });
+    const newContact = { id: nid++, ...data, fu: '', done: false, doneAt: null, snoozed: null };
+    contacts.unshift(newContact);
+    persistToDB(newContact);
   }
   persist(); closeModal(); render();
 }
@@ -686,7 +1419,9 @@ function saveModal() {
 function deleteContact() {
   if (!editId) return;
   if (!confirm('Delete this contact? This cannot be undone.')) return;
-  contacts = contacts.filter(x => x.id !== editId);
+  const idToDelete = editId;
+  contacts = contacts.filter(x => x.id !== idToDelete);
+  deleteFromDB(idToDelete);
   persist(); closeModal(); render();
 }
 
@@ -712,7 +1447,7 @@ function exportCSV() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'SmartContact_Judy_' + new Date().toISOString().slice(0,10) + '.csv';
+  a.download = 'SmartContact_' + new Date().toISOString().slice(0,10) + '.csv';
   document.body.appendChild(a); a.click(); document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
@@ -760,6 +1495,167 @@ function importCSV(e) {
   };
   reader.readAsText(file);
   e.target.value = '';
+}
+</script>
+
+<!-- SOCIAL MODAL -->
+
+<div class="overlay" id="social-overlay" onclick="bgCloseSocial(event)">
+  <div class="modal">
+    <div class="modal-title">📱 Draft Social Post</div>
+    <div style="font-size:13px;color:#6b7280;margin-bottom:16px;" id="social-contact-name"></div>
+
+```
+<div class="fg">
+  <label>Platform</label>
+  <div style="display:flex;gap:6px;margin-bottom:12px;">
+    <button onclick="setSocialPlatform('Instagram')" id="sp-Instagram" style="flex:1;padding:8px 4px;border-radius:8px;font-size:12px;font-weight:600;border:1.5px solid #0a1628;background:#0a1628;color:#fff;cursor:pointer;">Instagram</button>
+    <button onclick="setSocialPlatform('Facebook')" id="sp-Facebook" style="flex:1;padding:8px 4px;border-radius:8px;font-size:12px;font-weight:600;border:1.5px solid #e4e1dc;background:#fff;color:#6b7280;cursor:pointer;">Facebook</button>
+    <button onclick="setSocialPlatform('LinkedIn')" id="sp-LinkedIn" style="flex:1;padding:8px 4px;border-radius:8px;font-size:12px;font-weight:600;border:1.5px solid #e4e1dc;background:#fff;color:#6b7280;cursor:pointer;">LinkedIn</button>
+  </div>
+</div>
+
+<div class="fg">
+  <label>Post Type</label>
+  <select class="fi" id="social-type">
+    <option value="closed">🏡 Just Closed</option>
+    <option value="listed">📋 Just Listed</option>
+    <option value="anniversary">🎉 Home Anniversary</option>
+    <option value="market">📊 Market Update</option>
+    <option value="testimonial">⭐ Client Spotlight</option>
+    <option value="tip">💡 Agent Tip</option>
+  </select>
+</div>
+
+<div class="fg">
+  <label>Context (optional)</label>
+  <input class="fi" id="social-context" placeholder="e.g. 3 bed in Mystic, CT, first-time buyers">
+</div>
+
+<div class="modal-acts">
+  <button class="m-save" id="social-go" onclick="genSocial()">✨ Generate Post</button>
+  <button class="m-cancel" onclick="closeSocial()">Cancel</button>
+</div>
+
+<div id="social-result" style="display:none;margin-top:16px;padding:14px;background:#fdf4ff;border:1px solid #e9d5ff;border-radius:10px;font-size:13px;line-height:1.7;color:#1e1e2e;white-space:pre-wrap;"></div>
+<div id="social-copy-row" style="display:none;margin-top:8px;">
+  <button onclick="copySocial()" style="font-size:12px;font-weight:600;color:#7c3aed;background:none;border:none;cursor:pointer;text-decoration:underline;">Copy Post</button>
+</div>
+```
+
+  </div>
+</div>
+
+<script>
+let socialContactId = null;
+let socialPlatform = 'Instagram';
+
+function setSocialPlatform(p) {
+  socialPlatform = p;
+  ['Instagram','Facebook','LinkedIn'].forEach(pl => {
+    const btn = document.getElementById('sp-' + pl);
+    if (btn) {
+      btn.style.background = pl === p ? '#0a1628' : '#fff';
+      btn.style.color = pl === p ? '#fff' : '#6b7280';
+      btn.style.borderColor = pl === p ? '#0a1628' : '#e4e1dc';
+    }
+  });
+}
+
+function openSocial(id) {
+  socialContactId = id;
+  const c = contacts.find(x => x.id === id);
+  document.getElementById('social-contact-name').textContent = c ? `For: ${c.name} · ${c.type}` : '';
+  document.getElementById('social-result').style.display = 'none';
+  document.getElementById('social-copy-row').style.display = 'none';
+  document.getElementById('social-context').value = '';
+  setSocialPlatform('Instagram');
+  document.getElementById('social-overlay').classList.add('on');
+}
+
+function closeSocial() {
+  document.getElementById('social-overlay').classList.remove('on');
+  socialContactId = null;
+}
+
+function bgCloseSocial(e) {
+  if (e.target === document.getElementById('social-overlay')) closeSocial();
+}
+
+async function genSocial() {
+  const c = contacts.find(x => x.id === socialContactId);
+  if (!c) return;
+  const postType = document.getElementById('social-type').value;
+  const context = document.getElementById('social-context').value.trim();
+  const btn = document.getElementById('social-go');
+  btn.disabled = true; btn.textContent = 'Generating…';
+
+  const postTypeLabels = {
+    closed: 'just closed deal announcement',
+    listed: 'just listed new property announcement',
+    anniversary: 'home anniversary celebration post',
+    market: 'local market update',
+    testimonial: 'client spotlight or testimonial',
+    tip: 'helpful real estate tip for buyers or sellers'
+  };
+
+  const platformRules = {
+    Instagram: 'Keep it under 150 words. Use line breaks for readability. Include 5-8 relevant hashtags at the end.',
+    Facebook: 'Keep it under 200 words. Conversational and warm. No hashtags needed.',
+    LinkedIn: 'Keep it under 200 words. Professional tone. 2-3 hashtags maximum at the end.'
+  };
+
+  const prompt = `You are a real estate social media copywriter. Write a ready-to-post ${socialPlatform} caption for a real estate agent.
+
+Post type: ${postTypeLabels[postType]}
+Agent market area: Connecticut
+Client: ${c.name} (${c.type})
+${context ? `Additional context: ${context}` : ''}
+Platform rules: ${platformRules[socialPlatform]}
+
+Rules:
+- Do NOT use the client's full last name — use first name only or "our clients"
+- Sound human, warm, and authentic — not corporate
+- Include a soft call to action
+- Do not make up specific details not provided
+- Plain text only, ready to copy and post
+
+Write the post now.`;
+
+  try {
+    const result = await api(prompt, 400);
+    document.getElementById('social-result').textContent = result;
+    document.getElementById('social-result').style.display = 'block';
+    document.getElementById('social-copy-row').style.display = 'block';
+    // Also save to drafts
+    if (socialContactId && contacts.find(x => x.id === socialContactId)) {
+      if (!drafts[socialContactId]) drafts[socialContactId] = {};
+      drafts[socialContactId].social = result;
+      drafts[socialContactId].mode = 'social';
+      if (drafts[socialContactId].moreOpen) render();
+    }
+  } catch(e) {
+    const fallbacks = {
+      closed: `Congratulations to our clients on their new home! It was an honor helping them find the perfect place. Every closing is a reminder of why I love what I do. If you or someone you know is thinking about buying or selling, I am here to help.\n\n#RealEstate #JustClosed #NewHome #ConnecticutRealEstate #HomeBuying`,
+      listed: `Just listed! A beautiful home is now available and ready for its next owners. Reach out if you would like to schedule a showing or learn more.\n\n#JustListed #RealEstate #ConnecticutHomes #ForSale #DreamHome`,
+      anniversary: `Happy home anniversary! One year ago today, the keys changed hands and a house became a home. These moments are why I love what I do. Congratulations!\n\n#HomeAnniversary #RealEstate #ClientLove #Connecticut`,
+      market: `The Connecticut market is moving. If you have been thinking about buying or selling, now is a great time to have a conversation. I am always happy to share what I am seeing.\n\n#RealEstate #MarketUpdate #Connecticut #HomeBuying #HomeSelling`,
+      testimonial: `There is nothing better than helping someone find their perfect home. Grateful for amazing clients who trust me with one of the biggest decisions of their lives.\n\n#ClientLove #RealEstate #Connecticut #Grateful #Realtor`,
+      tip: `Thinking about buying a home? One of the best things you can do is get pre-approved before you start looking. It shows sellers you are serious and helps you move fast in a competitive market. Questions? I am always here to help.\n\n#RealEstateTip #HomeBuying #Connecticut #Realtor`
+    };
+    document.getElementById('social-result').textContent = fallbacks[postType] || fallbacks.closed;
+    document.getElementById('social-result').style.display = 'block';
+    document.getElementById('social-copy-row').style.display = 'block';
+  }
+
+  btn.disabled = false; btn.textContent = '✨ Generate Post';
+}
+
+function copySocial() {
+  const text = document.getElementById('social-result').textContent;
+  navigator.clipboard.writeText(text).catch(() => {});
+  const btn = event?.target;
+  if (btn) { btn.textContent = 'Copied!'; setTimeout(() => { btn.textContent = 'Copy Post'; }, 1500); }
 }
 </script>
 
