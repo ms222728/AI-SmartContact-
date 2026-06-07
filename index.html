@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartContact • AI-Powered Daily Action for Real Estate Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1E2937 100%);
+        }
+
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .feature-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-slate-900 rounded-2xl flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl tracking-tighter">SC</span>
+                    </div>
+                    <div>
+                        <span class="font-display text-2xl font-semibold tracking-tighter">SmartContact</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#problem" class="text-slate-600 hover:text-slate-900 transition-colors">The Problem</a>
+                    <a href="#features" class="text-slate-600 hover:text-slate-900 transition-colors">Features</a>
+                    <a href="#how" class="text-slate-600 hover:text-slate-900 transition-colors">How it works</a>
+                    <a href="#pilot" class="text-slate-600 hover:text-slate-900 transition-colors">CT Pilot</a>
+                </div>
+                
+                <div class="flex items-center gap-x-4">
+                    <a href="#" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 hover:bg-slate-100 transition-all">
+                        Log in
+                    </a>
+                    <a href="#pilot" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-2xl bg-slate-900 text-white hover:bg-slate-800 transition-all">
+                        Join CT Pilot
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-gradient text-white">
+        <div class="max-w-screen-xl mx-auto px-8 pt-16 pb-20 md:pt-20 md:pb-24">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/10 backdrop-blur-md mb-6">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-medium tracking-wide">Now in CT Pilot • Limited spots</span>
+                </div>
+                
+                <h1 class="font-display text-6xl md:text-7xl leading-[1.05] tracking-tighter font-semibold">
+                    Your AI daily<br>action partner<br>for real estate.
+                </h1>
+                
+                <p class="mt-6 max-w-lg text-xl text-slate-300">
+                    Stop drowning in leads and follow-ups. Get a clear, prioritized daily plan every morning — powered by AI that actually understands how you work.
+                </p>
+                
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="#pilot" class="inline-flex items-center justify-center gap-x-2 px-8 py-4 text-base font-semibold rounded-3xl bg-white text-slate-900 hover:bg-slate-100 transition-all">
+                        <span>Join the CT Pilot</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    
+                    <a href="#how" class="inline-flex items-center justify-center gap-x-2 px-8 py-4 text-base font-semibold rounded-3xl border border-white/30 hover:bg-white/10 transition-all">
+                        See how it works
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex items-center gap-x-8 text-sm">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 bg-slate-300 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=28" alt=""></div>
+                        <div class="w-8 h-8 bg-slate-300 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=47" alt=""></div>
+                        <div class="w-8 h-8 bg-slate-300 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=12" alt=""></div>
+                    </div>
+                    <div class="text-slate-300 text-sm">
+                        <span class="font-semibold text-white">47 agents</span> exploring the pilot
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="border-b border-slate-200 bg-white">
+        <div class="max-w-screen-xl mx-auto px-8 py-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 text-center">
+                <div>
+                    <div class="text-3xl font-semibold tracking-tighter">3.2×</div>
+                    <div class="text-sm text-slate-500 mt-1">more follow-ups completed</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold tracking-tighter">41%</div>
+                    <div class="text-sm text-slate-500 mt-1">faster lead response time</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold tracking-tighter">19 min</div>
+                    <div class="text-sm text-slate-500 mt-1">saved per day on average</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold tracking-tighter">92%</div>
+                    <div class="text-sm text-slate-500 mt-1">would recommend to a colleague</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE PROBLEM (NEW) -->
+    <section id="problem" class="max-w-screen-xl mx-auto px-8 section-padding border-b border-slate-200">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="inline-block px-4 py-1 rounded-3xl bg-red-100 text-red-700 text-xs font-semibold tracking-[1px]">THE REALITY FOR MOST AGENTS</span>
+                <h2 class="mt-4 font-display text-4xl tracking-tighter">Your day shouldn’t feel like this.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white border border-slate-200 rounded-3xl p-8">
+                    <h3 class="font-semibold text-xl mb-4 flex items-center gap-x-2">
+                        <i class="fa-solid fa-exclamation-triangle text-red-500"></i>
+                        <span>The Current Reality</span>
+                    </h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex gap-x-3"><i class="fa-solid fa-check text-red-400 mt-1"></i> Waking up to 40+ new notifications and not knowing where to start</li>
+                        <li class="flex gap-x-3"><i class="fa-solid fa-check text-red-400 mt-1"></i> Spending hours chasing leads that go cold</li>
+                        <li class="flex gap-x-3"><i class="fa-solid fa-check text-red-400 mt-1"></i> Forgetting to follow up with hot prospects because you’re buried in admin</li>
+                        <li class="flex gap-x-3"><i class="fa-solid fa-check text-red-400 mt-1"></i> Feeling like you’re working 12-hour days but not moving the needle</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white border border-emerald-200 rounded-3xl p-8">
+                    <h3 class="font-semibold text-xl mb-4 flex items-center gap-x-2">
+                        <i class="fa-solid fa-lightbulb text-emerald-500"></i>
+                        <span>What SmartContact Changes</span>
+                    </h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> Wake up to a clear, prioritized list of what actually matters today</li>
+                        <li class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> AI drafts personalized follow-ups in your voice in seconds</li>
+                        <li class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> Never miss a hot lead again with smart reminders</li>
+                        <li class="flex gap-x-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> Get your evenings back while still staying on top of everything</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY I'M BUILDING THIS (NEW) -->
+    <section class="bg-white border-b border-slate-200">
+        <div class="max-w-screen-xl mx-auto px-8 py-14">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center">
+                            <span class="text-white text-4xl font-bold tracking-tighter">MS</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-2xl tracking-tighter mb-4">Why I’m building SmartContact</h3>
+                        <div class="text-slate-600 space-y-4 text-[15px]">
+                            <p>I’ve spent years working in operations and process improvement. I’ve seen how much time gets wasted on repetitive tasks that technology should handle.</p>
+                            <p>Real estate agents are some of the hardest-working people I know — yet many are still stuck managing their day with sticky notes, spreadsheets, and mental checklists. I’m building SmartContact because I believe you deserve better tools that actually understand how you work.</p>
+                            <p>This isn’t about replacing agents. It’s about giving you back hours every week so you can focus on what you do best: helping clients and closing deals.</p>
+                        </div>
+                        <p class="mt-4 text-sm font-medium">— Michael Scudder, North Franklin, CT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-screen-xl mx-auto px-8 section-padding">
+        <div class="text-center mb-12">
+            <span class="inline-block px-4 py-1 rounded-3xl bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-[1px]">CORE FEATURES</span>
+            <h2 class="mt-3 font-display text-5xl tracking-tighter">Everything you need in one daily view</h2>
+            <p class="mt-4 max-w-md mx-auto text-slate-600">SmartContact turns chaos into a clear, prioritized action list every morning.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="feature-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-list-check text-emerald-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tighter mb-3">AI Task Prioritization</h3>
+                <p class="text-slate-600">Every morning, SmartContact analyzes your leads, appointments, and pipeline to build the highest-impact task list for your day.</p>
+            </div>
+            
+            <div class="feature-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-paper-plane text-emerald-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tighter mb-3">Smart Follow-ups</h3>
+                <p class="text-slate-600">One-click AI-drafted texts and emails that feel personal. Auto-schedule the next touchpoint based on lead temperature.</p>
+            </div>
+            
+            <div class="feature-card bg-white border border-slate-200 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-calendar-check text-emerald-600 text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tighter mb-3">Intelligent Scheduling</h3>
+                <p class="text-slate-600">Syncs with your calendar and suggests optimal times for showings, calls, and follow-ups based on your energy and client availability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how" class="bg-white border-t border-slate-200">
+        <div class="max-w-screen-xl mx-auto px-8 section-padding">
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-1 rounded-3xl bg-slate-100 text-slate-700 text-xs font-semibold tracking-[1px]">HOW IT WORKS</span>
+                <h2 class="mt-3 font-display text-5xl tracking-tighter">Three steps to a calmer, more productive day</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">01</div>
+                    <h3 class="font-semibold text-xl tracking-tighter mb-3">Connect your world</h3>
+                    <p class="text-slate-600">Link your CRM, calendar, and email in under 60 seconds.</p>
+                </div>
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">02</div>
+                    <h3 class="font-semibold text-xl tracking-tighter mb-3">Get your AI daily plan</h3>
+                    <p class="text-slate-600">SmartContact builds a prioritized task list every morning.</p>
+                </div>
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">03</div>
+                    <h3 class="font-semibold text-xl tracking-tighter mb-3">Execute with one-click actions</h3>
+                    <p class="text-slate-600">Draft messages, log calls, schedule follow-ups — all in one place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAILY AI EXAMPLE (NEW) -->
+    <section class="max-w-screen-xl mx-auto px-8 section-padding bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="inline-block px-4 py-1 rounded-3xl bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-[1px]">SEE IT IN ACTION</span>
+                <h2 class="mt-3 font-display text-4xl tracking-tighter">What your morning could look like</h2>
+                <p class="mt-3 text-slate-600">Here’s an example of the kind of daily briefing SmartContact would deliver.</p>
+            </div>
+            
+            <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-10">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <div class="text-emerald-400 text-sm font-medium">TODAY’S AI DAILY BRIEF</div>
+                        <div class="text-2xl font-semibold tracking-tighter">Good morning, Sarah.</div>
+                    </div>
+                    <div class="text-right text-sm">
+                        <div class="text-slate-400">March 12, 2026</div>
+                        <div class="font-medium">12 high-priority tasks</div>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white/10 rounded-2xl p-5">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="font-semibold">🔥 Hot Lead: Jennifer M.</div>
+                                <div class="text-sm text-slate-300 mt-1">Viewed the listing 3 days ago. No follow-up yet. High buying signals.</div>
+                            </div>
+                            <button class="text-xs px-4 py-1.5 bg-emerald-500 hover:bg-emerald-600 transition-colors rounded-xl font-medium">Draft Text</button>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/10 rounded-2xl p-5">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="font-semibold">📅 Showing Today – 2:30pm</div>
+                                <div class="text-sm text-slate-300 mt-1">The Miller family at 47 Oak Street. Prep notes + comps ready.</div>
+                            </div>
+                            <button class="text-xs px-4 py-1.5 bg-white/20 hover:bg-white/30 transition-colors rounded-xl font-medium">View Prep</button>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/10 rounded-2xl p-5">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="font-semibold">📬 Follow-up: David K.</div>
+                                <div class="text-sm text-slate-300 mt-1">Listing went under contract yesterday. Time to check in.</div>
+                            </div>
+                            <button class="text-xs px-4 py-1.5 bg-emerald-500 hover:bg-emerald-600 transition-colors rounded-xl font-medium">Draft Email</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <span class="text-sm text-emerald-400">One-click actions • All synced back to your CRM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU GET IN THE PILOT (NEW) -->
+    <section class="max-w-screen-xl mx-auto px-8 section-padding">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="inline-block px-4 py-1 rounded-3xl bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-[1px]">THE PILOT EXPERIENCE</span>
+            <h2 class="mt-3 font-display text-4xl tracking-tighter mb-4">What you get as a pilot participant</h2>
+            <p class="text-lg text-slate-600 mb-10">This isn’t just testing — it’s a high-touch collaboration.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="bg-white border border-slate-200 rounded-3xl p-7">
+                    <h4 class="font-semibold mb-4 flex items-center gap-x-2"><i class="fa-solid fa-check-circle text-emerald-500"></i> Direct access to me</h4>
+                    <p class="text-slate-600 text-sm">You’ll work directly with me. Your feedback will shape the product in real time.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-3xl p-7">
+                    <h4 class="font-semibold mb-4 flex items-center gap-x-2"><i class="fa-solid fa-check-circle text-emerald-500"></i> Early access</h4>
+                    <p class="text-slate-600 text-sm">Be among the first to use new features as they’re built.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-3xl p-7">
+                    <h4 class="font-semibold mb-4 flex items-center gap-x-2"><i class="fa-solid fa-check-circle text-emerald-500"></i> No cost during pilot</h4>
+                    <p class="text-slate-600 text-sm">Full access while we’re in pilot phase. No long-term commitment required.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-3xl p-7">
+                    <h4 class="font-semibold mb-4 flex items-center gap-x-2"><i class="fa-solid fa-check-circle text-emerald-500"></i> Influence the roadmap</h4>
+                    <p class="text-slate-600 text-sm">Features you need most get prioritized based on your input.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONNECTICUT PILOT CTA -->
+    <section id="pilot" class="max-w-screen-xl mx-auto px-8 pb-16">
+        <div class="max-w-3xl mx-auto text-center bg-white border border-slate-200 rounded-3xl p-12">
+            <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-[1px] mb-6">
+                CONNECTICUT PILOT — NOW FORMING
+            </div>
+            
+            <h2 class="font-display text-4xl tracking-tighter mb-4">Ready to take back your time?</h2>
+            
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+                I’m looking for a small group of serious agents in Eastern CT who want to help shape the future of how they work. 
+                In exchange for honest feedback, you’ll get early access and real influence.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-sm">
+                <div class="px-5 py-2.5 bg-slate-50 rounded-2xl">Limited to a small group</div>
+                <div class="px-5 py-2.5 bg-slate-50 rounded-2xl">No cost during pilot</div>
+                <div class="px-5 py-2.5 bg-slate-50 rounded-2xl">High-touch support</div>
+            </div>
+            
+            <a href="mailto:Michael.Scudder.sc@gmail.com?subject=SmartContact%20CT%20Pilot%20Interest" 
+               class="inline-flex items-center justify-center gap-x-3 px-10 py-4 text-lg font-semibold rounded-3xl bg-slate-900 text-white hover:bg-slate-800 transition-all">
+                <span>I’m Interested — Let’s Talk</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            
+            <p class="mt-4 text-sm text-slate-500">Or reply directly to my message</p>
+        </div>
+    </section>
+
+    <!-- FAQ (NEW) -->
+    <section class="max-w-screen-xl mx-auto px-8 pb-20">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="inline-block px-4 py-1 rounded-3xl bg-slate-100 text-slate-700 text-xs font-semibold tracking-[1px]">COMMON QUESTIONS</span>
+                <h2 class="mt-3 font-display text-4xl tracking-tighter">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2">Is SmartContact actually built yet?</h4>
+                    <p class="text-slate-600 text-sm">Not fully. Right now we have the vision and landing page. The pilot is about shaping what gets built. You’ll be involved from the ground up.</p>
+                </div>
+                
+                <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2">How much time will this take as a pilot participant?</h4>
+                    <p class="text-slate-600 text-sm">Very little on your end. Mostly using the tool in your normal workflow and giving occasional feedback (15–20 min calls every couple of weeks).</p>
+                </div>
+                
+                <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2">Will I have to pay anything?</h4>
+                    <p class="text-slate-600 text-sm">No. Pilot participants get full access at no cost while we’re building and validating.</p>
+                </div>
+                
+                <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2">What if I don’t like it?</h4>
+                    <p class="text-slate-600 text-sm">No commitment. You can leave the pilot at any time. The goal is to build something genuinely useful — if it’s not working for you, I want to know.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-screen-xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-y-6">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-white/10 rounded-2xl flex items-center justify-center">
+                        <span class="text-white font-bold text-xl tracking-tighter">SC</span>
+                    </div>
+                    <span class="font-display text-white text-xl font-semibold tracking-tighter">SmartContact</span>
+                </div>
+                
+                <div class="text-sm text-center md:text-left">
+                    Built with ❤️ for agents who want their time back.<br>
+                    <span class="text-xs">Early stage • Honest feedback welcome</span>
+                </div>
+                
+                <div class="text-sm">
+                    Michael P. Scudder • North Franklin, CT
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
